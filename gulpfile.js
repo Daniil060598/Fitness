@@ -31,7 +31,7 @@ const css = () => {
 };
 
 const js = () => {
-  return gulp.src(['source/js/main.js'])
+  return gulp.src(['source/js/**/*.js'])
       .pipe(gulp.dest('build/js'))
 };
 

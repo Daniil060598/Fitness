@@ -1,0 +1,13 @@
+.title {
+  font-family: 'Bebas Neue';
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  color: $color-tory-blue;
+
+  &_big {
+    font-size: 109px;
+    line-height: 109px;
+    letter-spacing: 0.03em;
+  }
+}

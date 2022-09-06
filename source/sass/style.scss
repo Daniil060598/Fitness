@@ -11,7 +11,7 @@
 @import "variables";
 @import "mixins";
 @import "global/fonts";
-@import "global/reboot";
+@import "global/global";
 @import "global/utils";
 @import "global/container";
 
@@ -20,6 +20,7 @@
 
 @import "blocks/btn";
 @import "blocks/modal";
+@import "blocks/title";
 
 // ---------------------------------
 

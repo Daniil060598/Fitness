@@ -12,10 +12,35 @@
 @font-face {
   font-style: normal;
   font-weight: 400;
-  font-family: "";
-
+  font-family: "Bebas Neue";
   font-display: swap;
-  src:
-    url("../fonts/.woff2") format("woff2"),
-    url("../fonts/.woff") format("woff");
+  src: url("../fonts/bebasneue-regular.woff2") format("woff2"),
+    url("../fonts/bebasneue-regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 300;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../fonts/robotocondensed-light.woff2") format("woff2"),
+    url("../fonts/robotocondensed-light.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../fonts/robotocondensed-bold.woff2") format("woff2"),
+    url("../fonts/robotocondensed-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto Condensed";
+  font-display: swap;
+  src: url("../fonts/robotocondensed-regular.woff2") format("woff2"),
+    url("../fonts/robotocondensed-regular.woff") format("woff");
 }
