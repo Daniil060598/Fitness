@@ -13,14 +13,15 @@
 @import "global/fonts";
 @import "global/global";
 @import "global/utils";
-@import "global/container";
 
 // Blocks
 // ---------------------------------
 
-@import "blocks/btn";
+@import "blocks/button";
 @import "blocks/modal";
+@import "blocks/container";
 @import "blocks/title";
+@import "blocks/header";
 
 // ---------------------------------
 

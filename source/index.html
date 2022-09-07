@@ -1,23 +1,59 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>Фитнес</title>
-    <link rel="stylesheet" href="css/style.min.css">
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-      </header>
-      <main>
-      </main>
-      <footer>
-      </footer>
-    </div>
-    <script src="js/vendor.js"></script>
-    <script src="js/main.js" type="module"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Описание проекта">
+  <title>Фитнес</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__wrapper container">
+        <a class="header__logo">
+          <img class="header__logo-img logo" width="89" height="20" src="img/svg/supergym-logo.svg" alt="Логотип.">
+        </a>
+        <a class="header__phone" href="tel:+88005555555">8-800-555-55-55</a>
+        <div class="header__left-column">
+          <p class="header__city-name">омск</p>
+          <h1 class="header__title title title_big">Фитнес центр</h1>
+          <p class="header__text">
+            Тренажёрный зал
+            Групповые занятия
+            Кардио-зона
+          </p>
+          <button class="header__button button">Купить абонемент</button>
+        </div>
+        <picture>
+          <source type="image/webp"
+            srcset="img/header-img.webp 1x, img/header-img@2x.webp 2x">
+          <img class="header__img" src="img/header-img.jpg" width="500" height="556"
+            srcset="img/header-img@2x.jpg 2x" alt="Мужчина спортивного телосложения в футболке супермена.">
+        </picture>
+        <ul class="header__social">
+          <li class="header__social-item">
+            <a href="#">Fb</a>
+          </li>
+          <li class="header__social-item">
+            <a href="#">vk</a>
+          </li>
+          <li class="header__social-item">
+            <a href="#">ig</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+    </main>
+    <footer>
+    </footer>
+  </div>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+
 </html>

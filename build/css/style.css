@@ -386,6 +386,14 @@ template {
 
 @font-face {
   font-style: normal;
+  font-weight: 700;
+  font-family: "Bebas Neue";
+  font-display: swap;
+  src: url("../fonts/bebasneue-bold.woff2") format("woff2"), url("../fonts/bebasneue-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
   font-weight: 400;
   font-family: "Bebas Neue";
   font-display: swap;
@@ -435,7 +443,7 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: #000000;
 }
 
@@ -603,17 +611,13 @@ button,
   transition: none !important;
 }
 
-.container {
-  width: 100%;
-  max-width: 1920px;
-  margin: 0 auto;
-  padding: 0 40px;
-}
-
-.btn {
+.button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   padding: 21px 20px;
   font-family: "Roboto Condensed";
   font-style: normal;
@@ -631,13 +635,13 @@ button,
   transition: 0.3s ease;
 }
 
-.btn:disabled {
+.button:disabled {
   opacity: 0.5;
   pointer-events: none;
 }
 
-.btn:hover,
-.btn:focus {
+.button:hover,
+.button:focus {
   opacity: 0.8;
 }
 
@@ -753,18 +757,154 @@ button,
   pointer-events: auto;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 .title {
-  font-family: 'Bebas Neue';
+  font-family: "Bebas Neue", "Arial", sans-serif;
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;
   color: #102654;
+  margin: 0;
 }
 
 .title_big {
   font-size: 109px;
   line-height: 109px;
   letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+.header {
+  min-height: 658px;
+  background: conic-gradient(from 130.31deg at 16.03% 39.06%, #b80027 -46.69deg, #003d85 32.24deg, #b80027 313.31deg, #003d85 392.24deg);
+}
+
+.header__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(auto, 400px) 60px minmax(auto, 500px) 60px minmax(auto, 140px);
+  grid-template-columns: minmax(auto, 400px) minmax(auto, 500px) minmax(auto, 140px);
+  grid-template-areas: "logo phone phone" "title img social";
+  -webkit-column-gap: 60px;
+  -moz-column-gap: 60px;
+  column-gap: 60px;
+  padding: 30px 20px 51px;
+}
+
+.header__logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+}
+
+.header__phone {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  -ms-grid-column-align: end;
+  justify-self: end;
+  font-family: 'Bebas Neue';
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  grid-area: phone;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.header__phone:hover,
+.header__phone:focus {
+  opacity: 0.8;
+}
+
+.header__text {
+  position: absolute;
+  top: 305px;
+  width: 113px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: end;
+  margin: 0;
+  color: #ffffff;
+}
+
+.header__left-column {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  grid-area: title;
+  padding-top: 45px;
+}
+
+.header__city-name {
+  font-family: 'Bebas Neue';
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  margin: 0 0 25px;
+  color: #ffffff;
+}
+
+.header__title {
+  text-align: end;
+  margin-bottom: 80px;
+}
+
+.header__button {
+  width: 230px;
+}
+
+.header__img {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  -o-object-fit: cover;
+  object-fit: cover;
+  grid-area: img;
+}
+
+.header__social {
+  -ms-grid-row: 2;
+  -ms-grid-column: 5;
+  grid-area: social;
+  align-self: flex-end;
+  -ms-grid-column-align: end;
+  justify-self: end;
+  padding: 0 0 45px;
+  margin: 0;
+  list-style: none;
+}
+
+.header__social-item a {
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.header__social-item a:hover,
+.header__social-item a:focus {
+  opacity: 0.8;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -774,23 +914,82 @@ button,
   }
 } */
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
+@media (max-width: 1199px) {
+  .header {
+    min-height: 554px;
   }
-}
 
-@media (max-width: 1023px) {
-  .container {
-    padding: 0 24px;
+  .header {
+    min-height: 491px;
+  }
+
+  .header__wrapper {
+    -ms-grid-columns: 1fr 30px 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto 25px auto;
+    grid-template-areas: "logo phone" "title img";
+    padding: 40px 45px 82px;
+    -webkit-column-gap: 30px;
+    -moz-column-gap: 30px;
+    column-gap: 30px;
+    row-gap: 25px;
+  }
+
+  .header__phone {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  .header__text {
+    top: 190px;
+    right: 210px;
+  }
+
+  .header__city-name {
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 16px;
+  }
+
+  .header__title {
+    max-width: 235px;
+    font-size: 86px;
+    line-height: 86px;
+    margin-bottom: 60px;
+  }
+
+  .header__img {
+    height: 390px;
+  }
+
+  .header__logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .header__phone {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+  }
+
+  .header__left-column {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .header__img {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+  }
+
+  .header__social {
+    display: none;
   }
 }
 
 @media (max-width: 767px) {
-  .container {
-    padding: 0 16px;
-  }
-
   .modal__wrapper {
     padding: 60px 16px;
   }
@@ -802,5 +1001,61 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .header__wrapper {
+    grid-template-areas: "logo phone" "title title";
+    row-gap: 0;
+    padding: 20px 15px 80px;
+  }
+
+  .header__phone {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .header__text {
+    top: 220px;
+    right: 180px;
+  }
+
+  .header__left-column {
+    padding-top: 80px;
+  }
+
+  .header__city-name {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+
+  .header__title {
+    font-size: 78px;
+    line-height: 78px;
+  }
+
+  .header__button {
+    width: 100%;
+  }
+
+  .header__img {
+    display: none;
+  }
+
+  .header__logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .header__phone {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+  }
+
+  .header__left-column {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
   }
 }

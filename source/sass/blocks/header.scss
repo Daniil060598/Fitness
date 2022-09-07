@@ -1,0 +1,197 @@
+.header {
+  min-height: 658px;
+  background: conic-gradient(
+    from 130.31deg at 16.03% 39.06%,
+    #b80027 -46.69deg,
+    #003d85 32.24deg,
+    #b80027 313.31deg,
+    #003d85 392.24deg
+  );
+
+  @include vp-1199 {
+    min-height: 554px;
+  }
+
+  @include vp-1199 {
+    min-height: 491px;
+  }
+}
+
+.header__wrapper {
+  display: grid;
+  grid-template-columns: minmax(auto, 400px) minmax(auto, 500px) minmax( auto, 140px);
+  grid-template-areas:
+    "logo phone phone"
+    "title img social";
+  column-gap: 60px;
+  padding: 30px 20px 51px;
+
+  @include vp-1199 {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "logo phone"
+      "title img";
+    padding: 40px 45px 82px;
+    column-gap: 30px;
+    row-gap: 25px;
+  }
+
+  @include vp-767 {
+    grid-template-areas:
+      "logo phone"
+      "title title";
+    row-gap: 0;
+    padding: 20px 15px 80px;
+  }
+}
+
+.header__logo {
+  grid-area: logo;
+}
+
+.header__phone {
+  justify-self: end;
+  font-family: 'Bebas Neue';
+  font-size: 26px;
+  line-height: 26px;
+  letter-spacing: 0.03em;
+  color: $color-default-white;
+  grid-area: phone;
+  transition: $trans-default;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.header__text {
+  position: absolute;
+  top: 305px;
+  width: 113px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: end;
+  margin: 0;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    top: 190px;
+    right: 210px;
+  }
+
+  @include vp-767 {
+    top: 220px;
+    right: 180px;
+  }
+}
+
+.header__left-column {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  grid-area: title;
+  padding-top: 45px;
+
+  @include vp-767 {
+    padding-top: 80px;
+  }
+}
+
+.header__city-name {
+  font-family: 'Bebas Neue';
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  margin: 0 0 25px;
+  color: $color-default-white;
+
+  @include vp-1199 {
+    font-size: 34px;
+    line-height: 34px;
+    margin-bottom: 16px;
+  }
+
+  @include vp-767 {
+    font-size: 28px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+}
+
+.header__title {
+  text-align: end;
+  margin-bottom: 80px;
+
+  @include vp-1199 {
+    max-width: 235px;
+    font-size: 86px;
+    line-height: 86px;
+    margin-bottom: 60px;
+  }
+
+  @include vp-767 {
+    font-size: 78px;
+    line-height: 78px;
+  }
+}
+
+.header__button {
+  width: 230px;
+
+  @include vp-767 {
+    width: 100%;
+  }
+}
+
+.header__img {
+  object-fit: cover;
+  grid-area: img;
+
+  @include vp-1199 {
+    height: 390px;
+  }
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
+.header__social {
+  grid-area: social;
+  align-self: flex-end;
+  justify-self: end;
+  padding: 0 0 45px;
+  margin: 0;
+  list-style: none;
+
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.header__social-item a {
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: $color-default-white;
+  transition: $trans-default;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+}

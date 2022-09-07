@@ -11,6 +11,15 @@
 
 @font-face {
   font-style: normal;
+  font-weight: 700;
+  font-family: "Bebas Neue";
+  font-display: swap;
+  src: url("../fonts/bebasneue-bold.woff2") format("woff2"),
+    url("../fonts/bebasneue-bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
   font-weight: 400;
   font-family: "Bebas Neue";
   font-display: swap;
