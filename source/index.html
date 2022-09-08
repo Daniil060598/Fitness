@@ -29,10 +29,9 @@
           <button class="header__button button">Купить абонемент</button>
         </div>
         <picture>
-          <source type="image/webp"
-            srcset="img/header-img.webp 1x, img/header-img@2x.webp 2x">
-          <img class="header__img" src="img/header-img.jpg" width="500" height="556"
-            srcset="img/header-img@2x.jpg 2x" alt="Мужчина спортивного телосложения в футболке супермена.">
+          <source type="image/webp" srcset="img/header-img.webp 1x, img/header-img@2x.webp 2x">
+          <img class="header__img" src="img/header-img.jpg" width="500" height="556" srcset="img/header-img@2x.jpg 2x"
+            alt="Мужчина спортивного телосложения в футболке супермена.">
         </picture>
         <ul class="header__social">
           <li class="header__social-item">
@@ -47,13 +46,66 @@
         </ul>
       </div>
     </header>
-    <main>
+    <main class="main">
+      <section class="about-gym container">
+        <div class="about-gym__left-column">
+          <h2 class="about-gym__title title">Тренажерный зал</h2>
+          <h3 class="about-gym__subtitle">Просторный зал площадью 900 кв/м</h3>
+          <p>
+            Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
+            Тренажерный
+            зал оснащен всем необходимым современным оборудованием для всех спортсменов.
+          </p>
+          <p>
+            В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
+            несколько оборудованных залов для различных видов групповых занятий.
+          </p>
+        </div>
+        <picture>
+          <source type="image/webp" srcset="img/about-gym-img.webp 1x, img/about-gym-img@2x.webp 2x">
+          <img class="about-gym__img" src="img/about-gym-img.jpg" width="660" height="401"
+            srcset="img/about-gym-img@2x.jpg 2x" alt="">
+        </picture>
+        <div class="about-gym__video">
+          <div class="about-gym__video-cover">
+            <button class="about-gym__video-play"><span class="visually-hidden">Воспроизвести видео</span></button>
+          </div>
+          <div id="player"></div>
+        </div>
+      </section>
     </main>
     <footer>
     </footer>
   </div>
+  <script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        videoId: '9TZXsZItgdw',
+        events: {
+          'onReady': onPlayerReady,
+        }
+      });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    function onPlayerReady(event) {
+      event.target.playVideo();
+    }
+  </script>
   <script src="js/vendor.js"></script>
-  <script src="js/main.js" type="module"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

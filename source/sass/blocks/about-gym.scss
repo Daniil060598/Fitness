@@ -1,0 +1,174 @@
+.about-gym  {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 235px;
+
+  @include vp-1199 {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 183px;
+  }
+
+  @include vp-767 {
+    padding: 70px 0;
+    align-items: stretch;
+  }
+}
+
+.about-gym__left-column {
+  max-width: 355px;
+  padding-top: 51px;
+  margin-right: 30px;
+
+  @include vp-1199 {
+    max-width: 502px;
+    margin-right: 0;
+    padding-top: 0;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+  }
+}
+
+.about-gym__title {
+  margin-bottom: 15px;
+
+  @include vp-1199 {
+    text-align: center;
+    margin-bottom: 17px;
+  }
+
+  @include vp-767 {
+    text-align: left;
+    margin-bottom: 12px;
+  }
+}
+
+.about-gym__subtitle {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  margin: 0 0 40px;
+
+  @include vp-1199 {
+    margin-bottom: 35px;
+  }
+
+  @include vp-767 {
+    text-align: left;
+    margin-bottom: 25px;
+  }
+}
+
+.about-gym__left-column p {
+  font-weight: 300;
+  text-align: center;
+  margin: 0 0 20px;
+
+  @include vp-1199 {
+    margin-bottom: 43px;
+  }
+
+  @include vp-767 {
+    text-align: left;
+    margin-bottom: 33px;
+  }
+}
+
+.about-gym__left-column p:last-child {
+  @include vp-1199 {
+    display: none;
+  }
+}
+
+.about-gym__img {
+  object-fit: cover;
+
+  @include vp-1199 {
+    width: 678px;
+    height: 345px;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    height: 313px;
+    margin-bottom: 40px;
+  }
+}
+
+.about-gym__video {
+  position: absolute;
+  top: 408px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 228px;
+  width: 364px;
+
+  @include vp-1199 {
+    top: 587px;
+    width: 266px;
+    height: 167px;
+  }
+
+  @include vp-767 {
+    align-self: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 320px;
+  }
+}
+
+.about-gym__video iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.about-gym__video-cover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/video-cover.jpg") no-repeat;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(20, 54, 122, 0.5);
+    z-index: -1;
+  }
+}
+
+.about-gym__video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: transparent url("../../img/svg/video-play-button.svg") center no-repeat;
+  border: none;
+  cursor: pointer;
+  transition: $trans-default;
+  z-index: 2;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    width: 80px;
+    height: 80px;
+    background-size: 80%;
+  }
+}

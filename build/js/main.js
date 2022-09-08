@@ -1,5 +1,4 @@
 // ---------------------------------
-
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
@@ -7,6 +6,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  const buttonVideoPlayElement = document.querySelector('.about-gym__video-play');
+  const videoCoverElement = document.querySelector('.about-gym__video-cover');
+
+  buttonVideoPlayElement.addEventListener('click', () => {
+    videoCoverElement.style.display = 'none';
+    player.playVideo();
+  });
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
