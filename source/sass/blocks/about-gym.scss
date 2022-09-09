@@ -50,10 +50,10 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
-  text-align: center;
   margin: 0 0 40px;
 
   @include vp-1199 {
+    text-align: center;
     margin-bottom: 35px;
   }
 
@@ -65,10 +65,10 @@
 
 .about-gym__left-column p {
   font-weight: 300;
-  text-align: center;
   margin: 0 0 20px;
 
   @include vp-1199 {
+    text-align: center;
     margin-bottom: 43px;
   }
 
