@@ -76,85 +76,83 @@
       <section class="subscription">
         <div class="subscription__wrapper container">
           <h2 class="subscription__title title">Абонементы</h2>
-          <div class="subscription__tabs">
-            <input class="visually-hidden" type="radio" name="tabs" id="tab-1" checked>
-            <input class="visually-hidden" type="radio" name="tabs" id="tab-2">
-            <input class="visually-hidden" type="radio" name="tabs" id="tab-3">
-            <label class="subscription__tab tab tab-1" for="tab-1">
-              1 месяц
-            </label>
-            <label class="subscription__tab tab tab-2" for="tab-2">
-              6 месяцев
-            </label>
-            <label class="subscription__tab tab tab-3" for="tab-3">
-              12 месяцев
-            </label>
-            <div class="content content-1">
-              <ul class="subscription__list">
-                <li class="subscription__item">
-                  <h3 class="subscription__item-title">С тренером</h3>
-                  <p class="subscription__item-desc">12 занятий</p>
-                  <b class="subscription__item-price">5000</b>
-                  <a href="#" class="subscription__item-button button">купить абонемент</a>
-                </li>
-                <li class="subscription__item">
-                  <h3 class="subscription__item-title">Дневной</h3>
-                  <p class="subscription__item-desc">с 8:00 до 17:00 </p>
-                  <b class="subscription__item-price">1700</b>
-                  <a href="#" class="subscription__item-button button">купить абонемент</a>
-                </li>
-                <li class="subscription__item">
-                  <h3 class="subscription__item-title">Полный день</h3>
-                  <p class="subscription__item-desc">с 8:00 до 22:00 </p>
-                  <b class="subscription__item-price">2700</b>
-                  <a href="#" class="subscription__item-button button">купить абонемент</a>
-                </li>
-              </ul>
+          <div class="subscription__tabs tabs">
+            <div class="subscription__tabs-triggers subscription__tabs-triggers_no-js">
+              <a class="tabs__triggers-item" href="#tab-1">1 месяц</a>
+              <a class="tabs__triggers-item" href="#tab-2">6 месяцев</a>
+              <a class="tabs__triggers-item" href="#tab-3">12 месяцев</a>
             </div>
-            <div class="content content-2">
-              <ul class="subscription__list">
-                <li class="subscription__item">
-                  <h3 class="subscription__item-title">С тренером</h3>
-                  <p class="subscription__item-desc">12 занятий</p>
-                  <b class="subscription__item-price">15000</b>
-                  <a href="#" class="subscription__item-button button">купить абонемент</a>
-                </li>
-                <li class="subscription__item">
-                  <h3 class="subscription__item-title">Дневной</h3>
-                  <p class="subscription__item-desc">с 8:00 до 17:00 </p>
-                  <b class="subscription__item-price">5100</b>
-                  <a href="#" class="subscription__item-button button">купить абонемент</a>
-                </li>
-                <li class="subscription__item">
-                  <h3 class="subscription__item-title">Полный день</h3>
-                  <p class="subscription__item-desc">с 8:00 до 22:00 </p>
-                  <b class="subscription__item-price">8100</b>
-                  <a href="#" class="subscription__item-button button">купить абонемент</a>
-                </li>
-              </ul>
-            </div>
-            <div class="content content-3">
-              <ul class="subscription__list">
-                <li class="subscription__item">
-                  <h3 class="subscription__item-title">С тренером</h3>
-                  <p class="subscription__item-desc">12 занятий</p>
-                  <b class="subscription__item-price">30000</b>
-                  <a href="#" class="subscription__item-button button">купить абонемент</a>
-                </li>
-                <li class="subscription__item">
-                  <h3 class="subscription__item-title">Дневной</h3>
-                  <p class="subscription__item-desc">с 8:00 до 17:00 </p>
-                  <b class="subscription__item-price">10200</b>
-                  <a href="#" class="subscription__item-button button">купить абонемент</a>
-                </li>
-                <li class="subscription__item">
-                  <h3 class="subscription__item-title">Полный день</h3>
-                  <p class="subscription__item-desc">с 8:00 до 22:00 </p>
-                  <b class="subscription__item-price">16200</b>
-                  <a href="#" class="subscription__item-button button">купить абонемент</a>
-                </li>
-              </ul>
-            </div>
+            <ul class="tabs__content-list tabs__content-list_no-js list">
+              <li class="tabs__content-item" id="tab-1">
+                <h3 class="tabs__content-item-title tabs__content-item-title_no-js">1 месяц</h3>
+                <ul class="subscription__list">
+                  <li class="subscription__item">
+                    <h4>С тренером</h4>
+                    <p>12 занятий</p>
+                    <b>5000</b>
+                    <a href="#" class="button">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item">
+                    <h4>Дневной</h4>
+                    <p>с 8:00 до 17:00 </p>
+                    <b>1700</b>
+                    <a href="#" class="button">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item">
+                    <h4>Полный день</h4>
+                    <p>с 8:00 до 22:00 </p>
+                    <b>2700</b>
+                    <a href="#" class="button">купить абонемент</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="tabs__content-item" id="tab-2">
+                <h3 class="tabs__content-item-title tabs__content-item-title_no-js">6 месяцев</h3>
+                <ul class="subscription__list">
+                  <li class="subscription__item">
+                    <h4>С тренером</h4>
+                    <p>12 занятий</p>
+                    <b>15000</b>
+                    <a href="#" class="button">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item">
+                    <h4>Дневной</h4>
+                    <p>с 8:00 до 17:00 </p>
+                    <b>5100</b>
+                    <a href="#" class="button">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item">
+                    <h4>Полный день</h4>
+                    <p>с 8:00 до 22:00 </p>
+                    <b>8100</b>
+                    <a href="#" class="button">купить абонемент</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="tabs__content-item" id="tab-3">
+                <h3 class="tabs__content-item-title tabs__content-item-title_no-js">12 месяцев</h3>
+                <ul class="subscription__list">
+                  <li class="subscription__item">
+                    <h4>С тренером</h4>
+                    <p>12 занятий</p>
+                    <b>30000</b>
+                    <a href="#" class="button">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item">
+                    <h4>Дневной</h4>
+                    <p>с 8:00 до 17:00 </p>
+                    <b>10200</b>
+                    <a href="#" class="button">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item">
+                    <h4>Полный день</h4>
+                    <p>с 8:00 до 22:00 </p>
+                    <b>16200</b>
+                    <a href="#" class="button">купить абонемент</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
       </section>

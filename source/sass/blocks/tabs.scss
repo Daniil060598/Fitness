@@ -1,0 +1,46 @@
+.tabs__triggers-item_active {
+  color: $color-tory-blue;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: $color-crimson;
+    z-index: 2;
+  }
+}
+
+.subscription__tabs-triggers_no-js {
+  display: none;
+}
+
+.tabs__content-list {
+  @include vp-1199 {
+    align-self: stretch;
+  }
+}
+
+.tabs__content-list_no-js .tabs__content-item {
+  display: block;
+}
+
+.tabs__content-item {
+  display: none;
+}
+
+.tabs__content-item_active {
+  display: block;
+}
+
+.tabs__content-item-title {
+  display: none;
+}
+
+.tabs__content-item-title_no-js {
+  display: block;
+}
+
+
+

@@ -14,6 +14,31 @@ window.addEventListener('DOMContentLoaded', () => {
     player.playVideo();
   });
 
+  // tabs
+  document.querySelector('.subscription__tabs-triggers').classList.remove('subscription__tabs-triggers_no-js');
+  document.querySelector('.tabs__content-list').classList.remove('tabs__content-list_no-js');
+  document.querySelectorAll('.tabs__content-item-title').forEach((item) => item.classList.remove('tabs__content-item-title_no-js'));
+
+  document.querySelectorAll('.tabs__triggers-item').forEach((item) => {
+    item.addEventListener('click', (evt) => {
+      evt.preventDefault();
+      const id = evt.target.getAttribute('href').replace('#', '');
+
+      document.querySelectorAll('.tabs__triggers-item').forEach(
+          (child) => child.classList.remove('tabs__triggers-item_active')
+      );
+
+      document.querySelectorAll('.tabs__content-item').forEach(
+          (child) => child.classList.remove('tabs__content-item_active')
+      );
+
+      item.classList.add('tabs__triggers-item_active');
+      document.getElementById(id).classList.add('tabs__content-item_active');
+    });
+  });
+
+  document.querySelector('.tabs__triggers-item').click();
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {

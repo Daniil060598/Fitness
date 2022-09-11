@@ -10,6 +10,18 @@
     right: -130px;
     transform: rotate(150deg);
   }
+
+  @include vp-767 {
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.subscription__wrapper {
+  @include vp-1199 {
+    padding: 100px 163px;
+  }
 }
 
 .subscription__title {
@@ -18,38 +30,49 @@
 }
 
 .subscription__tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.subscription__tabs-triggers {
   position: relative;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  z-index: 1;
+  margin-bottom: 39px;
+  border-bottom: 2px solid $color-grey;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 55px;
-    width: 341px;
-    border-bottom: 2px solid $color-grey;
-    z-index: -1;
+  @include vp-767 {
+    margin-bottom: 35px;
   }
 }
 
-.subscription__tab {
+.tabs__triggers-item {
+  position: relative;
   font-size: 20px;
   line-height: 30px;
   padding: 12px 0;
   margin-right: 46px;
-  margin-bottom: 39px;
-  border-bottom: 2px solid $color-grey;
+  // border-bottom: 2px solid $color-grey;
   color: #10265450;
   background-color: transparent;
   transition: $trans-default;
   cursor: pointer;
+  z-index: 1;
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  @include vp-1199 {
+    font-size: 18px;
+    line-height: 27px;
+    margin-right: 54px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 45px;
   }
 }
 
@@ -99,19 +122,37 @@
   &:hover::after {
     opacity: 1;
   }
+
+  @include vp-1199 {
+    padding: 63px 118px 68px;
+  }
+
+  @include vp-767 {
+    min-height: 384px;
+    padding: 50px 42px 55px;
+  }
 }
 
-.subscription__item-title {
+.subscription__item h4 {
   font-size: 26px;
   line-height: 29px;
   margin: 0 0 9px;
+
+  @include vp-767 {
+    font-size: 22px;
+    line-height: 24px;
+  }
 }
 
-.subscription__item-desc {
+.subscription__item p {
   margin: 0 0 90px;
+
+  @include vp-767 {
+    margin-bottom: 75px;
+  }
 }
 
-.subscription__item-price {
+.subscription__item b {
   position: relative;
   display: flex;
   align-items: baseline;
@@ -126,11 +167,23 @@
     width: 30px;
     height: 42px;
     margin-left: 14px;
-    background: url('../img/svg/ruble.svg');
+    background: url('../img/svg/ruble.svg') bottom no-repeat;
+  }
+
+  @include vp-767 {
+    font-size: 48px;
+    line-height: 72px;
+
+    &::after {
+      width: 24px;
+      height: 33px;
+      margin-left: 10px;
+      background-size: 24px 33px;
+    }
   }
 }
 
-.subscription__item-button {
+.subscription__item a {
   position: relative;
   padding: 23px 20px;
   color: $color-tory-blue;
@@ -163,31 +216,4 @@
     color: $color-default-white;
     border: none;
   }
-}
-
-.tab {
-  cursor: pointer;
-}
-
-.content {
-  display: none;
-}
-
-#tab-1:checked ~ .tab-1,
-#tab-2:checked ~ .tab-2,
-#tab-3:checked ~ .tab-3 {
-  color: $color-tory-blue;
-  border-bottom: 2px solid $color-crimson;
-}
-
-#tab-1:checked ~ .content-1,
-#tab-2:checked ~ .content-2,
-#tab-3:checked ~ .content-3 {
- display: block;
-}
-
-#tab-1:focus ~ .tab-1,
-#tab-2:focus ~ .tab-2,
-#tab-3:focus ~ .tab-3 {
-  outline: auto;
 }
