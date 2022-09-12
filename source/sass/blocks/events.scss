@@ -1,0 +1,132 @@
+.events__item {
+  display: flex;
+
+  @include vp-767 {
+    flex-direction: column;
+  }
+}
+
+.events__item-desc {
+  display: grid;
+  grid-template-columns: 201px 92px;
+  column-gap: 50px;
+  align-items: start;
+  max-width: 500px;
+  padding: 80px 78px 87px;
+  color: $color-default-white;
+  background-color: $color-torch-red;
+
+  @include vp-1199 {
+    grid-template-columns: minmax(117px, auto) minmax(56px, auto);
+    column-gap: 30px;
+    padding: 51px 45px;
+  }
+
+  @include vp-767 {
+    max-width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.events__item-desc h3 {
+  font-family: $ff-bebas-neue;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  margin: 0 0 4px;
+
+  @include vp-1199 {
+    font-size: 52px;
+    line-height: 52px;
+  }
+}
+
+.events__item-date {
+  max-width: 64px;
+}
+
+.events__item-desc dl {
+  margin: 0;
+}
+
+.events__item-desc dt {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 3px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid $color-default-white;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 18px;
+    padding-bottom: 3px;
+  }
+}
+
+.events__item-desc dd {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0;
+
+  &:first-of-type {
+    display: flex;
+  }
+
+  @include vp-1199 {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.events__item-desc dd span {
+  margin-left: 7px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+
+  @include vp-1199 {
+    font-size: 10px;
+    line-height: 15px;
+  }
+}
+
+.events__item-desc p {
+  grid-column: 1 / 3;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0 0 48px;
+
+  @include vp-1199 {
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 31px;
+  }
+}
+
+.events__item-desc button {
+  grid-column: 1 / 3;
+  border-width: 2px;
+
+  @include vp-1199 {
+    font-size: 10px;
+    line-height: 12px;
+    padding: 11px 20px 12px;
+  }
+}
+
+.events__item-img {
+  object-fit: cover;
+  height: 100%;
+
+  @include vp-1199 {
+    min-width: 386px;
+    max-height: 400px;
+  }
+
+  @include vp-767 {
+    min-width: 290px;
+    width: 100%;
+    min-height: 292px;
+  }
+}
