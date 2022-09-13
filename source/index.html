@@ -181,31 +181,123 @@
           </picture>
         </article>
       </section>
+      <section class="trainers container">
+        <h2 class="trainers__title title">Тренеры</h2>
+        <div class="trainers__slider-wrapper">
+          <div class="trainers__slider">
+            <ul class="trainers__list list swiper-wrapper">
+              <li class="trainers__item swiper-slide">
+                <div class="trainers__item-desc">
+                  <h3>Анна Павлова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <picture>
+                  <source type="image/webp" srcset="img/coaches/trainer-1.webp 1x, img/coaches/trainer-1@2x.webp 2x">
+                  <img src="img/coaches/trainer-1.jpg" width="260" height="294" srcset="img/coaches/trainer-1@2x.jpg 2x"
+                    alt="">
+                </picture>
+              </li>
+              <li class="trainers__item swiper-slide">
+                <div class="trainers__item-desc">
+                  <h3>Анна Павлова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <picture>
+                  <source type="image/webp" srcset="img/coaches/trainer-2.webp 1x, img/coaches/trainer-2@2x.webp 2x">
+                  <img src="img/coaches/trainer-2.jpg" width="260" height="294" srcset="img/coaches/trainer-2@2x.jpg 2x"
+                    alt="">
+                </picture>
+              </li>
+              <li class="trainers__item swiper-slide">
+                <div class="trainers__item-desc">
+                  <h3>Анна Павлова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <picture>
+                  <source type="image/webp" srcset="img/coaches/trainer-3.webp 1x, img/coaches/trainer-3@2x.webp 2x">
+                  <img src="img/coaches/trainer-3.jpg" width="260" height="294" srcset="img/coaches/trainer-3@2x.jpg 2x"
+                    alt="">
+                </picture>
+              </li>
+              <li class="trainers__item swiper-slide">
+                <div class="trainers__item-desc">
+                  <h3>Анна Павлова</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <picture>
+                  <source type="image/webp" srcset="img/coaches/trainer-4.webp 1x, img/coaches/trainer-4@2x.webp 2x">
+                  <img src="img/coaches/trainer-4.jpg" width="260" height="294" srcset="img/coaches/trainer-4@2x.jpg 2x"
+                    alt="">
+                </picture>
+              </li>
+              <li class="trainers__item swiper-slide">
+                <div class="trainers__item-desc">
+                  <h3>Анна Павлова2</h3>
+                  <p>CrossFit</p>
+                  <ul>
+                    <li>Certified Level 3 Trainer</li>
+                    <li>Победитель чемпионата России по CrossFit</li>
+                    <li>Опыт — 6 лет</li>
+                  </ul>
+                </div>
+                <picture>
+                  <source type="image/webp" srcset="img/coaches/trainer-4.webp 1x, img/coaches/trainer-4@2x.webp 2x">
+                  <img src="img/coaches/trainer-4.jpg" width="260" height="294" srcset="img/coaches/trainer-4@2x.jpg 2x"
+                    alt="">
+                </picture>
+              </li>
+            </ul>
+          </div>
+          <button class="trainers__slider-nav trainers__slider-nav_prev"><span class="visually-hidden">Предыдущий
+              слайд</span></button>
+          <button class="trainers__slider-nav trainers__slider-nav_next"><span class="visually-hidden">Следующий
+              слайд</span></button>
+        </div>
+      </section>
     </main>
     <footer>
     </footer>
-  </div>
-  <script>
-    // 2. This code loads the IFrame Player API code asynchronously.
-    var tag = document.createElement('script');
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
 
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    // 3. This function creates an <iframe> (and YouTube player)
-    //    after the API code downloads.
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '100%',
-        width: '100%',
-        videoId: '9TZXsZItgdw',
-      });
-    }
-  </script>
-  <script src="js/vendor.js"></script>
-  <script src="js/main.js"></script>
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '100%',
+          width: '100%',
+          videoId: '9TZXsZItgdw',
+        });
+      }
+    </script>
+    <script src="js/vendor.js" type="module"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

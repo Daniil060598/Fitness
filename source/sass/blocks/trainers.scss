@@ -1,0 +1,156 @@
+.trainers {
+  padding: 0 66px 120px;
+  max-width: 1292px;
+
+  @include vp-1199 {
+    padding: 0 101px 100px;
+    max-width: 768px;
+  }
+
+  @include vp-767 {
+    max-width: 320px;
+    padding: 0 47px 70px;
+  }
+}
+
+.trainers__title {
+  margin-bottom: 62px;
+
+  @include vp-1199 {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.trainers__slider-wrapper {
+  position: relative;
+}
+
+.trainers__slider {
+  overflow: hidden;
+}
+
+.trainers__item {
+  position: relative;
+  width: 260px;
+  height: 294px;
+  margin-right: 20px;
+  color: $color-default-white;
+  z-index: 1;
+  overflow: hidden;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover .trainers__item-desc {
+    top: 0;
+    transition: $trans-default;
+    background-color: #10265490;
+    height: 100%;
+  }
+
+  &:hover h3 {
+    margin-bottom: 0;
+  }
+
+  @include vp-1199 {
+    width: 268px;
+  }
+
+  @include vp-767 {
+    height: 274px;
+  }
+}
+
+.trainers__item-desc {
+  position: absolute;
+  top: 200px;
+  padding: 52px 45px 52px 55px;
+
+  @include vp-767 {
+    padding: 41px 34px;
+  }
+}
+
+.trainers__item-desc h3 {
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+.trainers__item-desc p {
+  text-align: center;
+  margin: 0 0 38px;
+  color: $color-spindle;
+}
+
+.trainers__item-desc ul {
+  padding: 0;
+  list-style: none;
+}
+
+.trainers__item-desc li {
+  position: relative;
+  font-size: 14px;
+  line-height: 21px;
+  margin-bottom: 12px;
+  padding-left: 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 25px;
+    background-color: $color-default-white;
+  }
+}
+
+.trainers__item img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.trainers__slider-nav {
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 16px;
+  height: 32px;
+  background: transparent url("../img/svg/slider-arrow.svg") center no-repeat;
+  border: none;
+  cursor: pointer;
+
+  &_prev {
+    left: -56px;
+  }
+
+  &_next {
+    right: -56px;
+    transform: translate(0, -50%) rotate(180deg);
+  }
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+    background-size: 10px 19px;
+
+    &_prev {
+      left: -32px;
+    }
+
+    &_next {
+      right: -32px;
+    }
+  }
+}
