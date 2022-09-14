@@ -1,0 +1,138 @@
+.promotions__title {
+  text-align: center;
+  margin-bottom: 62px;
+}
+
+.promotions__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  min-height: 462px;
+
+  @include vp-1199 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.promotions__item-main {
+  display: grid;
+  grid-template-columns: auto 399px;
+  grid-row: 1 / 3;
+
+  @include vp-1199 {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    min-height: 462px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, minmax(299px, 1fr));
+    grid-column: 1 / 2;
+  }
+}
+
+.promotions__item-main-desc {
+  display: flex;
+  flex-direction: column;
+  padding: 45px;
+  background-color: $color-torch-red;
+  color: $color-default-white;
+
+  @include vp-767 {
+    align-items: center;
+    padding: 41px;
+  }
+}
+
+.promotions__item-main-desc h3 {
+  font-size: 28px;
+  line-height: 28px;
+  margin: 0 0 3px;
+}
+
+.promotions__item-main-desc b {
+  font-size: 70px;
+  line-height: 70px;
+  margin: 0 0 18px;
+
+  @include vp-767 {
+    margin: 0 0 13px;
+  }
+}
+
+.promotions__item-main-desc p {
+  font-size: 18px;
+  line-height: 25px;
+  margin: 0;
+
+  @include vp-767 {
+    text-align: center;
+  }
+}
+
+.promotions__item-main-desc a {
+  align-self: flex-start;
+  margin-top: auto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-bottom: solid 1px $color-default-white;
+
+  @include vp-767 {
+    align-self: center;
+  }
+}
+
+.promotions__item-main img {
+  object-fit: cover;
+  height: 100%;
+
+  @include vp-1199 {
+    width: 100%;
+  }
+}
+
+.promotions__item {
+  display: flex;
+  flex-direction: column;
+  padding: 31px 35px;
+  border: 7px solid transparent;
+  border-image: linear-gradient( #ED0233 17.6%, #003EB7 95.31%);
+  border-image-slice: 1;
+
+  @include vp-1199 {
+    min-height: 211px;
+  }
+}
+
+.promotions__item h3 {
+  font-size: 26px;
+  line-height: 26px;
+  margin: 0 0 10px;
+}
+
+.promotions__item p {
+  font-size: 16px;
+  line-height: 22px;
+  margin: 0;
+}
+
+.promotions__item a {
+  align-self: flex-start;
+  margin-top: auto;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-tory-blue;
+  border-bottom: solid 1px $color-tory-blue;
+}
