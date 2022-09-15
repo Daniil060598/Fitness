@@ -22,7 +22,20 @@ const swiper = new Swiper('.trainers__slider', {
 
   // Navigation arrows
   navigation: {
-    nextEl: '.trainers__slider-nav_next',
-    prevEl: '.trainers__slider-nav_prev',
+    nextEl: '.trainers__slider-wrapper .slider-nav_next',
+    prevEl: '.trainers__slider-wrapper .slider-nav_prev',
+  },
+});
+
+const swiper2 = new Swiper('.reviews__slider', {
+  // Optional parameters
+  // slidesPerView: 1,
+  spaceBetween: 200,
+  loop: true,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.reviews__slider .slider-nav_next',
+    prevEl: '.reviews__slider .slider-nav_prev',
   },
 });

@@ -316,9 +316,11 @@
               </li>
             </ul>
           </div>
-          <button class="trainers__slider-nav trainers__slider-nav_prev"><span class="visually-hidden">Предыдущий
+          <!-- trainers__slider-nav trainers__slider-nav_prev -->
+          <!-- trainers__slider-nav trainers__slider-nav_next -->
+          <button class="slider-nav slider-nav_prev"><span class="visually-hidden">Предыдущий
               слайд</span></button>
-          <button class="trainers__slider-nav trainers__slider-nav_next"><span class="visually-hidden">Следующий
+          <button class="slider-nav slider-nav_next"><span class="visually-hidden">Следующий
               слайд</span></button>
         </div>
       </section>
@@ -388,6 +390,86 @@
             <a href="#">подробнее</a>
           </li>
         </ul>
+      </section>
+      <section class="reviews container">
+        <h2 class="reviews__title title">Отзывы</h2>
+        <div class="reviews__slider">
+          <ul class="reviews__list list swiper-wrapper">
+            <li class="reviews__item swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/reviews/avatar-1.webp 1x, img/reviews/avatar-1@2x.webp 2x">
+                <img src="img/reviews/avatar-1.png" width="80" height="80" srcset="img/reviews/avatar-1@2x.png 2x"
+                  alt="">
+              </picture>
+              <h3>Анна Орлова</h3>
+              <p>
+                «Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто,
+                тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»
+              </p>
+            </li>
+            <li class="reviews__item swiper-slide">
+              <picture>
+                <source type="image/webp" srcset="img/reviews/avatar-1.webp 1x, img/reviews/avatar-1@2x.webp 2x">
+                <img src="img/reviews/avatar-1.png" width="80" height="80" srcset="img/reviews/avatar-1@2x.png 2x"
+                  alt="">
+              </picture>
+              <h3>Анна Орлова 2</h3>
+              <p>
+                «Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто,
+                тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»
+              </p>
+            </li>
+          </ul>
+          <button class="slider-nav slider-nav_prev">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="slider-nav slider-nav_next">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
+        </div>
+      </section>
+      <section class="contacts">
+        <div class="contacts__wrapper">
+          <div class="contacts__left-column">
+            <h2 class="contacts__form-title title">бесплатное занятие</h2>
+            <form class="contacts__form" action="https://echo.htmlacademy.ru/" method="get">
+              <div class="contacts__form-field">
+                <label class="visually-hidden" for="name">Введите ваше имя</label>
+                <input type="text" id="name" name="name" placeholder="Имя" minlength="2" maxlength="50" required>
+              </div>
+              <div class="contacts__form-field">
+                <label class="visually-hidden" for="tel">Введите ваш телефон</label>
+                <input type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[0-9]{1,30}" required>
+              </div>
+              <button class="contacts__form-button button" type="submit">Оставить заявку</button>
+            </form>
+          </div>
+          <div class="contacts__right-column">
+            <h2 class="contacts__title title">Контакты</h2>
+            <div class="contacts__list-wrapper">
+              <ul class="contacts__list-address list">
+                <li class="contacts__item">
+                  <h3>Адрес:</h3>
+                  <p>г. Омск, ул. 60 лет Октября, 7</p>
+                </li>
+                <li class="contacts__item">
+                  <h3>График работы:</h3>
+                  <p>Пн-Вс: с 8:00 до 22:00</p>
+                </li>
+              </ul>
+              <ul class="contacts__list-phone list">
+                <li class="contacts__item">
+                  <h3>Телефон:</h3>
+                  <a href="tel:+88005555555">8-800-555-55-55</a>
+                </li>
+                <li class="contacts__item">
+                  <h3>Email:</h3>
+                  <a href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer>
