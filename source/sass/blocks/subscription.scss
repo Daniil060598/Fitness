@@ -46,6 +46,10 @@
   }
 }
 
+.subscription__tabs-triggers_no-js {
+  display: none;
+}
+
 .tabs__triggers-item {
   position: relative;
   font-size: 20px;
@@ -107,7 +111,7 @@
   &::after {
     z-index: -1;
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     left: 0;
     width: 100%;
@@ -115,7 +119,7 @@
     transition: opacity $trans-600;
     opacity: 0;
     border: 7px solid transparent;
-    border-image: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+    border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
     border-image-slice: 1;
   }
 
@@ -159,15 +163,15 @@
   font-size: 60px;
   line-height: 60px;
   margin-bottom: 50px;
-  color: #103AAE;
+  color: #103aae;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
     width: 30px;
     height: 42px;
     margin-left: 14px;
-    background: url('../img/svg/ruble.svg') bottom no-repeat;
+    background: url("../img/svg/ruble.svg") bottom no-repeat;
   }
 
   @include vp-767 {
@@ -195,18 +199,19 @@
   &::after {
     z-index: -1;
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     transition: opacity $trans-600;
     opacity: 0;
-    background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%) no-repeat;
+    background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%)
+      no-repeat;
   }
 
   &:hover::after,
-  &:focus::after{
+  &:focus::after {
     opacity: 1;
   }
 

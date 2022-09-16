@@ -19,7 +19,10 @@
 
 .header__wrapper {
   display: grid;
-  grid-template-columns: minmax(auto, 400px) minmax(auto, 500px) minmax( auto, 140px);
+  grid-template-columns: minmax(auto, 400px) minmax(auto, 500px) minmax(
+      auto,
+      140px
+    );
   grid-template-areas:
     "logo phone phone"
     "title img social";
@@ -51,7 +54,7 @@
 
 .header__phone {
   justify-self: end;
-  font-family: 'Bebas Neue';
+  font-family: $ff-bebas-neue;
   font-size: 26px;
   line-height: 26px;
   letter-spacing: 0.03em;
@@ -112,7 +115,7 @@
 }
 
 .header__city-name {
-  font-family: 'Bebas Neue';
+  font-family: $ff-bebas-neue;
   font-size: 49px;
   line-height: 49px;
   letter-spacing: 0.03em;

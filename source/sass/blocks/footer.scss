@@ -1,0 +1,36 @@
+.footer {
+  background-color: $color-russian-black;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 41px;
+  padding-bottom: 42px;
+
+  @include vp-1199 {
+    padding-top: 45px;
+    padding-bottom: 44px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 52px;
+  }
+}
+
+.footer__logo {
+  flex-shrink: 0;
+  margin-right: 40px;
+
+  @include vp-767 {
+    margin-bottom: 24px;
+  }
+}
+
+.footer__social {
+  @include vp-767 {
+    margin-top: 35px;
+  }
+}

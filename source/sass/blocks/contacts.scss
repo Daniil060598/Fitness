@@ -1,5 +1,9 @@
 .contacts {
-  background: linear-gradient(to right, $color-tory-blue 50%, $color-default-white 50%);
+  background: linear-gradient(
+    to right,
+    $color-tory-blue 50%,
+    $color-default-white 50%
+  );
 
   @include vp-1199 {
     background: none;
@@ -53,7 +57,7 @@
   background-color: transparent;
   color: $color-default-white;
   border: none;
-  border-bottom: solid 1px #74819C;
+  border-bottom: solid 1px #74819c;
   transition: $trans-default;
 
   &:hover,
@@ -96,7 +100,7 @@
 
 .contacts__list-address {
   padding-right: 60px;
-  border-right: 1px solid #74819C;
+  border-right: 1px solid #74819c;
 
   @include vp-767 {
     padding-right: 0;
@@ -159,4 +163,3 @@
     line-height: 27px;
   }
 }
-

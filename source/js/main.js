@@ -19,22 +19,24 @@ window.addEventListener('DOMContentLoaded', () => {
   document.querySelector('.tabs__content-list').classList.remove('tabs__content-list_no-js');
   document.querySelectorAll('.tabs__content-item-title').forEach((item) => item.classList.remove('tabs__content-item-title_no-js'));
 
+  const toggleTabs = (evt) => {
+    evt.preventDefault();
+    const id = evt.target.getAttribute('href').replace('#', '');
+
+    document.querySelectorAll('.tabs__triggers-item').forEach(
+        (child) => child.classList.remove('tabs__triggers-item_active')
+    );
+
+    document.querySelectorAll('.tabs__content-item').forEach(
+        (child) => child.classList.remove('tabs__content-item_active')
+    );
+
+    evt.target.classList.add('tabs__triggers-item_active');
+    document.getElementById(id).classList.add('tabs__content-item_active');
+  };
+
   document.querySelectorAll('.tabs__triggers-item').forEach((item) => {
-    item.addEventListener('click', (evt) => {
-      evt.preventDefault();
-      const id = evt.target.getAttribute('href').replace('#', '');
-
-      document.querySelectorAll('.tabs__triggers-item').forEach(
-          (child) => child.classList.remove('tabs__triggers-item_active')
-      );
-
-      document.querySelectorAll('.tabs__content-item').forEach(
-          (child) => child.classList.remove('tabs__content-item_active')
-      );
-
-      item.classList.add('tabs__triggers-item_active');
-      document.getElementById(id).classList.add('tabs__content-item_active');
-    });
+    item.addEventListener('click', toggleTabs);
   });
 
   document.querySelector('.tabs__triggers-item').click();

@@ -8,6 +8,11 @@
   <meta name="description" content="Описание проекта">
   <title>Фитнес</title>
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/robotocondensed-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotocondensed-light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/robotocondensed-regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bebasneue-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/bebasneue-bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 </head>
 
 <body>
@@ -30,6 +35,7 @@
         </div>
         <picture>
           <source type="image/webp" srcset="img/header-img.webp 1x, img/header-img@2x.webp 2x">
+          <!-- 1х: 500px; 2x: 1000px -->
           <img class="header__img" src="img/header-img.jpg" width="500" height="556" srcset="img/header-img@2x.jpg 2x"
             alt="Мужчина спортивного телосложения в футболке супермена.">
         </picture>
@@ -50,21 +56,22 @@
       <section class="about-gym container">
         <div class="about-gym__left-column">
           <h2 class="about-gym__title title">Тренажерный зал</h2>
-          <h3 class="about-gym__subtitle">Просторный зал площадью 900 <span>кв/м</span>>/h3>
-            <p>
-              Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
-              Тренажерный
-              зал оснащен всем необходимым современным оборудованием для всех спортсменов.
-            </p>
-            <p>
-              В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
-              несколько оборудованных залов для различных видов групповых занятий.
-            </p>
+          <h3 class="about-gym__subtitle">Просторный зал площадью 900 <span>кв/м</span></h3>
+          <p>
+            Supergym – самый большой фитнес центр за Уралом и идеальное место для укрепления тела и здоровья.
+            Тренажерный
+            зал оснащен всем необходимым современным оборудованием для всех спортсменов.
+          </p>
+          <p>
+            В зале расположены отдельная зона для Crossfit и кардио-зона с 40 тренажерами. Также в фитнес центре есть
+            несколько оборудованных залов для различных видов групповых занятий.
+          </p>
         </div>
         <picture>
           <source type="image/webp" srcset="img/about-gym-img.webp 1x, img/about-gym-img@2x.webp 2x">
-          <img class="about-gym__img" src="img/about-gym-img.jpg" width="660" height="401"
-            srcset="img/about-gym-img@2x.jpg 2x" alt="">
+          <!-- 1х: 660px; 2x: 1320px -->
+          <img src="img/about-gym-img.jpg" width="660" height="401"
+            srcset="img/about-gym-img@2x.jpg 2x" alt="Тренажерный зал.">
         </picture>
         <div class="about-gym__video">
           <div class="about-gym__video-cover">
@@ -158,7 +165,7 @@
       </section>
       <section class="events container">
         <h2 class="visually-hidden">Мероприятия</h2>
-        <article class="events__item">
+        <div class="events__item">
           <div class="events__item-desc">
             <h3>SUPER GAMES</h3>
             <div>
@@ -176,10 +183,11 @@
           </div>
           <picture>
             <source type="image/webp" srcset="img/events-img.webp 1x, img/events-img@2x.webp 2x">
+            <!-- 1х: 660px; 2x: 1320px -->
             <img class="events__item-img" src="img/events-img.jpg" width="660" height="500"
-              srcset="img/events-img@2x.jpg 2x" alt="">
+              srcset="img/events-img@2x.jpg 2x" alt="Мужчина спортивного телосложения отжимается от пола.">
           </picture>
-        </article>
+        </div>
       </section>
       <section class="trainers container">
         <h2 class="trainers__title title">Тренеры</h2>
@@ -198,8 +206,9 @@
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/coaches/trainer-1.webp 1x, img/coaches/trainer-1@2x.webp 2x">
+                  <!-- 1х: 260px; 2x: 520px -->
                   <img src="img/coaches/trainer-1.jpg" width="260" height="294" srcset="img/coaches/trainer-1@2x.jpg 2x"
-                    alt="">
+                    alt="Анна Павлова">
                 </picture>
               </li>
               <li class="trainers__item swiper-slide">
@@ -214,8 +223,9 @@
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/coaches/trainer-2.webp 1x, img/coaches/trainer-2@2x.webp 2x">
+                  <!-- 1х: 260px; 2x: 520px -->
                   <img src="img/coaches/trainer-2.jpg" width="260" height="294" srcset="img/coaches/trainer-2@2x.jpg 2x"
-                    alt="">
+                    alt="Алексей Лавров">
                 </picture>
               </li>
               <li class="trainers__item swiper-slide">
@@ -230,8 +240,9 @@
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/coaches/trainer-3.webp 1x, img/coaches/trainer-3@2x.webp 2x">
+                  <!-- 1х: 260px; 2x: 520px -->
                   <img src="img/coaches/trainer-3.jpg" width="260" height="294" srcset="img/coaches/trainer-3@2x.jpg 2x"
-                    alt="">
+                    alt="Александр Пашков">
                 </picture>
               </li>
               <li class="trainers__item swiper-slide">
@@ -246,8 +257,9 @@
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/coaches/trainer-4.webp 1x, img/coaches/trainer-4@2x.webp 2x">
+                  <!-- 1х: 260px; 2x: 520px -->
                   <img src="img/coaches/trainer-4.jpg" width="260" height="294" srcset="img/coaches/trainer-4@2x.jpg 2x"
-                    alt="">
+                    alt="Мария Кетова">
                 </picture>
               </li>
               <li class="trainers__item swiper-slide">
@@ -262,8 +274,9 @@
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/coaches/trainer-1.webp 1x, img/coaches/trainer-1@2x.webp 2x">
+                  <!-- 1х: 260px; 2x: 520px -->
                   <img src="img/coaches/trainer-1.jpg" width="260" height="294" srcset="img/coaches/trainer-1@2x.jpg 2x"
-                    alt="">
+                    alt="Анна Павлова">
                 </picture>
               </li>
               <li class="trainers__item swiper-slide">
@@ -278,8 +291,9 @@
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/coaches/trainer-2.webp 1x, img/coaches/trainer-2@2x.webp 2x">
+                  <!-- 1х: 260px; 2x: 520px -->
                   <img src="img/coaches/trainer-2.jpg" width="260" height="294" srcset="img/coaches/trainer-2@2x.jpg 2x"
-                    alt="">
+                    alt="Алексей Лавров">
                 </picture>
               </li>
               <li class="trainers__item swiper-slide">
@@ -294,8 +308,9 @@
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/coaches/trainer-3.webp 1x, img/coaches/trainer-3@2x.webp 2x">
+                  <!-- 1х: 260px; 2x: 520px -->
                   <img src="img/coaches/trainer-3.jpg" width="260" height="294" srcset="img/coaches/trainer-3@2x.jpg 2x"
-                    alt="">
+                    alt="Александр Пашков">
                 </picture>
               </li>
               <li class="trainers__item swiper-slide">
@@ -310,18 +325,19 @@
                 </div>
                 <picture>
                   <source type="image/webp" srcset="img/coaches/trainer-4.webp 1x, img/coaches/trainer-4@2x.webp 2x">
+                  <!-- 1х: 260px; 2x: 520px -->
                   <img src="img/coaches/trainer-4.jpg" width="260" height="294" srcset="img/coaches/trainer-4@2x.jpg 2x"
-                    alt="">
+                    alt="Мария Кетова">
                 </picture>
               </li>
             </ul>
           </div>
-          <!-- trainers__slider-nav trainers__slider-nav_prev -->
-          <!-- trainers__slider-nav trainers__slider-nav_next -->
-          <button class="slider-nav slider-nav_prev"><span class="visually-hidden">Предыдущий
-              слайд</span></button>
-          <button class="slider-nav slider-nav_next"><span class="visually-hidden">Следующий
-              слайд</span></button>
+          <button class="slider-nav slider-nav_prev">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="slider-nav slider-nav_next">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
         </div>
       </section>
       <section class="advantages">
@@ -342,7 +358,7 @@
                 <p>Вы всегда найдете место для своей машины на нашей парковке</p>
               </div>
             </li>
-            <li class="advantages__list-item">
+            <li class="advantages__list-item-main">
               <b>100</b>
               <h3>Тренажеров</h3>
               <p>Современные тренажеры на все группы мышц</p>
@@ -376,7 +392,8 @@
             </div>
             <picture>
               <source type="image/webp" srcset="img/promotions-img.webp 1x, img/promotions-img@2x.webp 2x">
-              <img src="img/promotions-img.jpg" width="280" height="462" srcset="img/promotions-img@2x.jpg 2x" alt="">
+              <!-- 1х: 280px; 2x: 560px -->
+              <img src="img/promotions-img.jpg" width="280" height="462" srcset="img/promotions-img@2x.jpg 2x" alt="Женщина спортивного телосложения на фоне ясного неба.">
             </picture>
           </li>
           <li class="promotions__item">
@@ -398,8 +415,9 @@
             <li class="reviews__item swiper-slide">
               <picture>
                 <source type="image/webp" srcset="img/reviews/avatar-1.webp 1x, img/reviews/avatar-1@2x.webp 2x">
+                <!-- 1х: 80px; 2x: 160px -->
                 <img src="img/reviews/avatar-1.png" width="80" height="80" srcset="img/reviews/avatar-1@2x.png 2x"
-                  alt="">
+                  alt="Анна Орлова.">
               </picture>
               <h3>Анна Орлова</h3>
               <p>
@@ -410,8 +428,9 @@
             <li class="reviews__item swiper-slide">
               <picture>
                 <source type="image/webp" srcset="img/reviews/avatar-1.webp 1x, img/reviews/avatar-1@2x.webp 2x">
+                <!-- 1х: 80px; 2x: 160px -->
                 <img src="img/reviews/avatar-1.png" width="80" height="80" srcset="img/reviews/avatar-1@2x.png 2x"
-                  alt="">
+                  alt="Анна Орлова.">
               </picture>
               <h3>Анна Орлова 2</h3>
               <p>
@@ -472,29 +491,85 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
+      <div class="footer__wrapper container">
+        <a class="footer__logo">
+          <img class="footer__logo-img logo" width="89" height="20" src="img/svg/supergym-logo.svg" alt="Логотип.">
+        </a>
+        <nav class="footer-nav">
+          <h3 class="visually-hidden">Навигация по сайту</h3>
+          <ul class="footer-nav__list list">
+            <li class="footer-nav__item">
+              <a href="#">Услуги</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Абонементы</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Акции</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Тренеры</a>
+            </li>
+            <li class="footer-nav__item">
+              <a href="#">Расписание</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer__social social">
+          <h3 class="visually-hidden">Социальные сети</h3>
+          <ul class="footer__social-list social__list list">
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__link-icon" width="25" height="25">
+                  <use xlink:href="img/sprite_auto.svg#ok-icon"></use>
+                </svg>
+                <span class="visually-hidden">Мы в одноклассниках</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__link-icon" width="25" height="25">
+                  <use xlink:href="img/sprite_auto.svg#vk-icon"></use>
+                </svg>
+                <span class="visually-hidden">Мы в вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link" href="#">
+                <svg class="social__link-icon" width="25" height="25">
+                  <use xlink:href="img/sprite_auto.svg#reddit-icon"></use>
+                </svg>
+                <span class="visually-hidden">Мы на реддите</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
-    <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
+  </div>
+  <script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '100%',
-          width: '100%',
-          videoId: '9TZXsZItgdw',
-        });
-      }
-    </script>
-    <script src="js/vendor.js" type="module"></script>
-    <script src="js/main.js"></script>
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        videoId: '9TZXsZItgdw',
+      });
+    }
+
+  </script>
+  <script src="js/vendor.js" type="module"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

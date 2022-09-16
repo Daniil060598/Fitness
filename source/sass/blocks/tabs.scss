@@ -1,5 +1,6 @@
 .tabs__triggers-item_active {
   color: $color-tory-blue;
+
   &::after {
     content: "";
     position: absolute;
@@ -10,10 +11,6 @@
     background-color: $color-crimson;
     z-index: 2;
   }
-}
-
-.subscription__tabs-triggers_no-js {
-  display: none;
 }
 
 .tabs__content-list {
@@ -41,6 +38,3 @@
 .tabs__content-item-title_no-js {
   display: block;
 }
-
-
-

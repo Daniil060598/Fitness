@@ -1,0 +1,22 @@
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.social__item {
+  margin-right: 11px;
+  margin-bottom: 11px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.social__link {
+  transition: opacity $trans-default;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}

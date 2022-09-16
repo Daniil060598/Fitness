@@ -1,0 +1,35 @@
+.footer-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include vp-767 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 130px);
+    column-gap: 30px;
+    row-gap: 21px;
+  }
+}
+
+.footer-nav__item {
+  margin-right: 40px;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @include vp-1199 {
+    margin-right: 30px;
+  }
+
+  @include vp-767 {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.footer-nav__item a {
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-default-white;
+}
