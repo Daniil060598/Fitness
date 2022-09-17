@@ -14,7 +14,12 @@ window.addEventListener('DOMContentLoaded', () => {
     player.playVideo();
   });
 
-  // tabs
+  // Shadow for price
+  document.querySelectorAll('.subscription__item b').forEach(
+      (item) => (item.querySelector('.subscription__price-shadow').textContent = item.textContent)
+  );
+
+  // Tabs
   document.querySelector('.subscription__tabs-triggers').classList.remove('subscription__tabs-triggers_no-js');
   document.querySelector('.tabs__content-list').classList.remove('tabs__content-list_no-js');
   document.querySelectorAll('.tabs__content-item-title').forEach((item) => item.classList.remove('tabs__content-item-title_no-js'));
@@ -40,6 +45,46 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelector('.tabs__triggers-item').click();
+
+  // Swiper 7.4.1
+
+  const swiper = new Swiper('.trainers__slider', {
+  // Optional parameters
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 30,
+
+    breakpoints: {
+      // when window width is >= 768px
+      1200: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
+
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 30,
+      },
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.trainers__slider-wrapper .slider-nav_next',
+      prevEl: '.trainers__slider-wrapper .slider-nav_prev',
+    },
+  });
+
+  const swiper2 = new Swiper('.reviews__slider', {
+    // Optional parameters
+    spaceBetween: 200,
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.reviews__slider .slider-nav_next',
+      prevEl: '.reviews__slider .slider-nav_prev',
+    },
+  });
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
