@@ -19,12 +19,13 @@
   @include vp-1199 {
     grid-template-columns: minmax(117px, auto) minmax(56px, auto);
     column-gap: 30px;
-    padding: 51px 45px;
+    padding: 47px 45px 47px;
   }
 
   @include vp-767 {
-    max-width: 100%;
     justify-content: space-between;
+    max-width: 100%;
+    padding: 46px 43px 50px;
   }
 }
 
@@ -38,12 +39,18 @@
   @include vp-1199 {
     font-size: 52px;
     line-height: 52px;
+    margin: 2px 0 0;
   }
 }
 
 .events__item-date {
   max-width: 64px;
   padding-bottom: 17px;
+
+  @include vp-1199 {
+    max-width: 42px;
+    padding-bottom: 6px;
+  }
 }
 
 .events__item-desc dl {
@@ -60,7 +67,7 @@
   @include vp-1199 {
     font-size: 12px;
     line-height: 18px;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
   }
 }
 
@@ -88,7 +95,8 @@
 
   @include vp-1199 {
     font-size: 10px;
-    line-height: 15px;
+    line-height: 12px;
+    margin-left: 3px;
   }
 }
 
@@ -103,6 +111,11 @@
     line-height: 12px;
     margin-bottom: 31px;
   }
+
+  @include vp-767 {
+    line-height: 18px;
+    margin-bottom: 30px;
+  }
 }
 
 .events__item-desc button {
@@ -112,8 +125,12 @@
   @include vp-1199 {
     font-size: 10px;
     line-height: 12px;
-    padding: 11px 20px 12px;
+    padding: 13px 20px 14px;
     border-width: 2px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 12px;
   }
 }
 

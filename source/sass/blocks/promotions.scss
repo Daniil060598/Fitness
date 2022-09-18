@@ -1,6 +1,14 @@
 .promotions__title {
   text-align: center;
-  margin-bottom: 62px;
+  margin-bottom: 51px;
+
+  @include vp-1199 {
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 42px;
+  }
 }
 
 .promotions__list {
@@ -41,13 +49,13 @@
 .promotions__item-main-desc {
   display: flex;
   flex-direction: column;
-  padding: 45px;
+  padding: 42px 45px 45px;
   background-color: $color-torch-red;
   color: $color-default-white;
 
   @include vp-767 {
     align-items: center;
-    padding: 41px;
+    padding: 41px 25px 45px;
   }
 }
 
@@ -111,7 +119,7 @@
 .promotions__item {
   display: flex;
   flex-direction: column;
-  padding: 31px 35px;
+  padding: 24px 28px 30px;
   border: 7px solid transparent;
   border-image: linear-gradient(#ed0233 17.6%, #003eb7 95.31%);
   border-image-slice: 1;
@@ -119,18 +127,30 @@
   @include vp-1199 {
     min-height: 211px;
   }
+
+  @include vp-767 {
+    padding: 36px 25px 40px;
+  }
 }
 
 .promotions__item h3 {
   font-size: 26px;
   line-height: 26px;
   margin: 0 0 10px;
+
+  @include vp-767 {
+    text-align: center;
+  }
 }
 
 .promotions__item p {
   font-size: 16px;
   line-height: 22px;
   margin: 0;
+
+  @include vp-767 {
+    text-align: center;
+  }
 }
 
 .promotions__item a {
@@ -143,4 +163,8 @@
   text-transform: uppercase;
   color: $color-tory-blue;
   border-bottom: solid 1px $color-tory-blue;
+
+  @include vp-767 {
+    align-self: center;
+  }
 }

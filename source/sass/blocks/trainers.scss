@@ -18,6 +18,11 @@
 
   @include vp-1199 {
     text-align: center;
+    margin-bottom: 40px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 42px;
   }
 }
 
@@ -68,7 +73,7 @@
   padding: 56px 45px 52px 55px;
 
   @include vp-767 {
-    padding: 41px 34px;
+    padding: 46px 33px;
   }
 }
 
@@ -77,12 +82,22 @@
   line-height: 18px;
   text-align: center;
   margin: 0 0 50px;
+  padding-right: 9px;
+
+  @include vp-1199 {
+    padding-right: 0;
+  }
 }
 
 .trainers__item-desc p {
   text-align: center;
   margin: 0 0 34px;
+  padding-right: 10px;
   color: $color-spindle;
+
+  @include vp-1199 {
+    padding-right: 0;
+  }
 }
 
 .trainers__item-desc ul {
@@ -94,7 +109,7 @@
   position: relative;
   font-size: 14px;
   line-height: 21px;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   padding-left: 16px;
 
   &::before {

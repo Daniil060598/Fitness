@@ -89,13 +89,12 @@
   color: $color-default-white;
 
   @include vp-1199 {
-    top: 190px;
-    right: 210px;
+    top: 179px;
+    left: 0;
   }
 
   @include vp-767 {
-    top: 220px;
-    right: 180px;
+    top: 193px;
   }
 }
 
@@ -107,8 +106,12 @@
   grid-area: title;
   padding-top: 111px;
 
+  @include vp-1199 {
+    padding-top: 47px;
+  }
+
   @include vp-767 {
-    padding-top: 80px;
+    padding-top: 69px;
   }
 }
 
@@ -123,13 +126,13 @@
   @include vp-1199 {
     font-size: 34px;
     line-height: 34px;
-    margin-bottom: 16px;
+    margin: 0 0 6px;
   }
 
   @include vp-767 {
     font-size: 28px;
     line-height: 34px;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
   }
 }
 
@@ -141,19 +144,25 @@
     max-width: 235px;
     font-size: 86px;
     line-height: 86px;
-    margin-bottom: 60px;
+    margin-bottom: 39px;
   }
 
   @include vp-767 {
     font-size: 78px;
     line-height: 78px;
+    margin-bottom: 41px;
   }
 }
 
 .header__button {
-  width: 233px;
+  min-width: 233px;
   margin-right: 3px;
   padding: 20px;
+
+  @include vp-1199 {
+    min-width: 183px;
+    margin-right: 0;
+  }
 
   @include vp-767 {
     width: 100%;
@@ -167,6 +176,7 @@
 
   @include vp-1199 {
     height: 390px;
+    margin-top: -7px;
   }
 
   @include vp-767 {

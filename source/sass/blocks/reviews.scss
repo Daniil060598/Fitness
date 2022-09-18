@@ -16,6 +16,10 @@
 .reviews__title {
   text-align: center;
   margin-bottom: 50px;
+
+  @include vp-1199 {
+    margin-bottom: 40px;
+  }
 }
 
 .reviews__slider {
@@ -39,7 +43,7 @@
 
   @include vp-1199 {
     max-width: 566px;
-    padding: 54px 65px 57px;
+    padding: 54px 65px 59px;
   }
 
   @include vp-767 {
@@ -62,6 +66,7 @@
 
 .reviews__item img {
   grid-row: 1 / 3;
+  padding-top: 8px;
 
   @include vp-767 {
     padding-left: 15px;

@@ -25,6 +25,7 @@
   @include vp-1199 {
     max-width: 502px;
     margin-right: 0;
+    margin-left: 0;
     padding-top: 0;
   }
 
@@ -38,12 +39,12 @@
 
   @include vp-1199 {
     text-align: center;
-    margin-bottom: 17px;
+    margin-bottom: 8px;
   }
 
   @include vp-767 {
     text-align: left;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
   }
 }
 
@@ -75,7 +76,7 @@
 
   @include vp-767 {
     text-align: left;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
   }
 }
 
@@ -85,7 +86,7 @@
   }
 }
 
-.about-gym__img {
+.about-gym img {
   object-fit: cover;
 
   @include vp-1199 {
@@ -110,6 +111,8 @@
 
   @include vp-1199 {
     top: 587px;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 266px;
     height: 167px;
   }
@@ -172,5 +175,11 @@
     width: 80px;
     height: 80px;
     background-size: 80%;
+  }
+
+  @include vp-1199 {
+    width: 73px;
+    height: 73px;
+    background-size: 73px;
   }
 }

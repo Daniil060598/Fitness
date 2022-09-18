@@ -14,11 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
     player.playVideo();
   });
 
-  // Shadow for price
-  document.querySelectorAll('.subscription__item b').forEach(
-      (item) => (item.querySelector('.subscription__price-shadow').textContent = item.textContent)
-  );
-
   // Tabs
   document.querySelector('.subscription__tabs-triggers').classList.remove('subscription__tabs-triggers_no-js');
   document.querySelector('.tabs__content-list').classList.remove('tabs__content-list_no-js');

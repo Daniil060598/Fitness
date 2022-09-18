@@ -1554,6 +1554,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding-right: 33px;
 }
 
 .footer-nav__item {
@@ -1690,7 +1691,7 @@ button,
 }
 
 .header__button {
-  width: 233px;
+  min-width: 233px;
   margin-right: 3px;
   padding: 20px;
 }
@@ -1769,7 +1770,7 @@ button,
   margin: 0 0 7px;
 }
 
-.about-gym__img {
+.about-gym img {
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -1950,8 +1951,9 @@ button,
   transition: opacity 0.6s ease;
   opacity: 0;
   border: 7px solid transparent;
-  -o-border-image: -o-linear-gradient(352.95deg, #ed0233 17.6%, #003eb7 95.31%);
-  border-image: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
+  -o-border-image: -o-linear-gradient(top, #ed0233 17.6%, #003eb7 95.31%);
+  border-image: -webkit-gradient(linear, left top, left bottom, color-stop(17.6%, #ed0233), color-stop(95.31%, #003eb7));
+  border-image: linear-gradient(to bottom, #ed0233 17.6%, #003eb7 95.31%);
   border-image-slice: 1;
 }
 
@@ -1969,17 +1971,6 @@ button,
   margin: 0 0 81px;
 }
 
-.subscription__price-shadow {
-  position: absolute;
-  top: -69px;
-  left: -20px;
-  font-weight: 700;
-  font-size: 100px;
-  line-height: 150px;
-  color: #e8e8e8;
-  z-index: -1;
-}
-
 .subscription__item b {
   position: relative;
   display: -webkit-box;
@@ -1992,6 +1983,18 @@ button,
   line-height: 60px;
   margin-bottom: 50px;
   color: #103aae;
+}
+
+.subscription__item b::before {
+  content: attr(data-price);
+  position: absolute;
+  top: -69px;
+  left: -20px;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 150px;
+  color: #e8e8e8;
+  z-index: -1;
 }
 
 .subscription__item b::after {
@@ -2225,11 +2228,13 @@ button,
   line-height: 18px;
   text-align: center;
   margin: 0 0 50px;
+  padding-right: 9px;
 }
 
 .trainers__item-desc p {
   text-align: center;
   margin: 0 0 34px;
+  padding-right: 10px;
   color: #b6bdcc;
 }
 
@@ -2242,7 +2247,7 @@ button,
   position: relative;
   font-size: 14px;
   line-height: 21px;
-  margin-bottom: 12px;
+  margin-bottom: 13px;
   padding-left: 16px;
 }
 
@@ -2273,12 +2278,12 @@ button,
 }
 
 .advantages__wrapper {
-  padding-bottom: 100px;
+  padding: 120px 76px 107px;
 }
 
 .advantages__title {
   text-align: center;
-  margin-bottom: 80px;
+  margin-bottom: 57px;
 }
 
 .advantages__list {
@@ -2302,7 +2307,7 @@ button,
   -ms-flex-align: end;
   align-items: flex-end;
   min-height: 165px;
-  padding: 0 11px 26px 20px;
+  padding: 0 11px 8px 0;
   border-top: 2px solid #d10a4220;
 }
 
@@ -2327,14 +2332,14 @@ button,
 .advantages__list-item span {
   display: block;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 14px;
   color: #2e35ac;
 }
 
 .advantages__list-item h3 {
   font-size: 22px;
   line-height: 33px;
-  margin: 0 0 3px;
+  margin: 4px 0 6px;
 }
 
 .advantages__list-item p {
@@ -2364,7 +2369,8 @@ button,
   -ms-flex-align: center;
   align-items: center;
   min-height: 307px;
-  padding: 53px 34px 58px;
+  margin: 10px 0;
+  padding: 54px 34px 58px;
   color: #ffffff;
   background-color: #1c3374;
 }
@@ -2390,7 +2396,7 @@ button,
 
 .promotions__title {
   text-align: center;
-  margin-bottom: 62px;
+  margin-bottom: 51px;
 }
 
 .promotions__list {
@@ -2420,7 +2426,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 45px;
+  padding: 42px 45px 45px;
   background-color: #ed0233;
   color: #ffffff;
 }
@@ -2470,7 +2476,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 31px 35px;
+  padding: 24px 28px 30px;
   border: 7px solid transparent;
   -o-border-image: -o-linear-gradient(#ed0233 17.6%, #003eb7 95.31%);
   border-image: -webkit-gradient(linear, left top, left bottom, color-stop(17.6%, #ed0233), color-stop(95.31%, #003eb7));
@@ -2543,6 +2549,7 @@ button,
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   grid-row: 1 / 3;
+  padding-top: 8px;
 }
 
 .reviews__item h3 {
@@ -2584,12 +2591,12 @@ button,
 }
 
 .contacts__left-column {
-  padding: 70px 170px 70px 20px;
+  padding: 70px 170px 65px 20px;
 }
 
 .contacts__form-title {
   color: #ffffff;
-  margin-bottom: 37px;
+  margin-bottom: 39px;
 }
 
 .contacts__form {
@@ -2597,7 +2604,7 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 28px;
 }
 
 .contacts__form-field input {
@@ -2620,17 +2627,21 @@ button,
 }
 
 .contacts__form-button {
+  font-size: 14px;
+  line-height: 16px;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / 3;
+  padding: 18px 20px 16px;
+  border-width: 3px;
 }
 
 .contacts__right-column {
-  padding: 70px 56px 70px 120px;
+  padding: 70px 56px 65px 120px;
 }
 
 .contacts__title {
-  margin-bottom: 38px;
+  margin-bottom: 42px;
 }
 
 .contacts__list-wrapper {
@@ -2641,6 +2652,7 @@ button,
 
 .contacts__list-address {
   padding-right: 60px;
+  padding-left: 5px;
   border-right: 1px solid #74819c;
 }
 
@@ -2659,13 +2671,13 @@ button,
 .contacts__item h3 {
   font-size: 16px;
   line-height: 24px;
-  margin: 0 0 3px;
+  margin: 0;
 }
 
 .contacts__item p {
   font-size: 14px;
   line-height: 21px;
-  margin: 0;
+  margin: 3px 0 0;
 }
 
 .contacts__item a {
@@ -2694,13 +2706,14 @@ button,
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding-top: 41px;
-  padding-bottom: 42px;
+  padding-bottom: 23px;
 }
 
 .footer__logo {
   -ms-flex-negative: 0;
   flex-shrink: 0;
   margin-right: 40px;
+  margin-top: 4px;
 }
 
 /* @media (hover: hover), screen and (min-width: 0\0) {
@@ -2722,7 +2735,11 @@ button,
 
   .logo {
     width: 82px;
-    height: 17px;
+    height: 18px;
+  }
+
+  .footer-nav__list {
+    padding-right: 30px;
   }
 
   .footer-nav__item {
@@ -2756,25 +2773,35 @@ button,
   }
 
   .header__text {
-    top: 190px;
-    right: 210px;
+    top: 179px;
+    left: 0;
+  }
+
+  .header__left-column {
+    padding-top: 47px;
   }
 
   .header__city-name {
     font-size: 34px;
     line-height: 34px;
-    margin-bottom: 16px;
+    margin: 0 0 6px;
   }
 
   .header__title {
     max-width: 235px;
     font-size: 86px;
     line-height: 86px;
-    margin-bottom: 60px;
+    margin-bottom: 39px;
+  }
+
+  .header__button {
+    min-width: 183px;
+    margin-right: 0;
   }
 
   .header__img {
     height: 390px;
+    margin-top: -7px;
   }
 
   .header__logo {
@@ -2816,12 +2843,13 @@ button,
   .about-gym__left-column {
     max-width: 502px;
     margin-right: 0;
+    margin-left: 0;
     padding-top: 0;
   }
 
   .about-gym__title {
     text-align: center;
-    margin-bottom: 17px;
+    margin-bottom: 8px;
   }
 
   .about-gym__subtitle {
@@ -2838,19 +2866,42 @@ button,
     display: none;
   }
 
-  .about-gym__img {
+  .about-gym img {
     width: 678px;
     height: 345px;
   }
 
   .about-gym__video {
     top: 587px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
     width: 266px;
     height: 167px;
   }
 
+  .about-gym__video-play {
+    width: 73px;
+    height: 73px;
+    background-size: 73px;
+  }
+
+  .subscription::after {
+    content: url("../img/subscription-decor-tablet.png");
+    bottom: -132px;
+  }
+
   .subscription__wrapper {
     padding: 100px 163px;
+  }
+
+  .subscription__title {
+    margin-bottom: 16px;
+  }
+
+  .subscription__tabs-triggers {
+    margin-bottom: 43px;
   }
 
   .tabs__triggers-item {
@@ -2880,18 +2931,24 @@ button,
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
-    padding: 51px 45px;
+    padding: 47px 45px 47px;
   }
 
   .events__item-desc h3 {
     font-size: 52px;
     line-height: 52px;
+    margin: 2px 0 0;
+  }
+
+  .events__item-date {
+    max-width: 42px;
+    padding-bottom: 6px;
   }
 
   .events__item-desc dt {
     font-size: 12px;
     line-height: 18px;
-    padding-bottom: 3px;
+    padding-bottom: 1px;
   }
 
   .events__item-desc dd {
@@ -2901,7 +2958,8 @@ button,
 
   .events__item-desc dd span {
     font-size: 10px;
-    line-height: 15px;
+    line-height: 12px;
+    margin-left: 3px;
   }
 
   .events__item-desc p {
@@ -2913,7 +2971,7 @@ button,
   .events__item-desc button {
     font-size: 10px;
     line-height: 12px;
-    padding: 11px 20px 12px;
+    padding: 13px 20px 14px;
     border-width: 2px;
   }
 
@@ -2929,10 +2987,27 @@ button,
 
   .trainers__title {
     text-align: center;
+    margin-bottom: 40px;
   }
 
   .trainers__item {
     width: 268px;
+  }
+
+  .trainers__item-desc h3 {
+    padding-right: 0;
+  }
+
+  .trainers__item-desc p {
+    padding-right: 0;
+  }
+
+  .advantages__wrapper {
+    padding: 100px 45px 94px;
+  }
+
+  .advantages__title {
+    margin-bottom: 42px;
   }
 
   .advantages__list {
@@ -2946,7 +3021,10 @@ button,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    row-gap: 42px;
+    -webkit-column-gap: 45px;
+    -moz-column-gap: 45px;
+    column-gap: 45px;
+    row-gap: 43px;
   }
 
   .advantages__list-item {
@@ -2968,12 +3046,13 @@ button,
 
   .advantages__list-item span {
     font-size: 14px;
-    line-height: 21px;
+    line-height: 16px;
   }
 
   .advantages__list-item h3 {
     font-size: 20px;
     line-height: 30px;
+    margin: 0 0 2px;
   }
 
   .advantages__list-item-main {
@@ -2985,6 +3064,26 @@ button,
     grid-row: 2 / 3;
     min-height: 239px;
     margin: 0 118px;
+    padding: 35px 115px;
+  }
+
+  .advantages__list-item-main b {
+    margin-bottom: 0;
+  }
+
+  .advantages__list-item-main h3 {
+    font-size: 22px;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+
+  .advantages__list-item-main p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .promotions__title {
+    margin-bottom: 40px;
   }
 
   .promotions__list {
@@ -3016,9 +3115,13 @@ button,
     padding: 0 0 100px;
   }
 
+  .reviews__title {
+    margin-bottom: 40px;
+  }
+
   .reviews__item {
     max-width: 566px;
-    padding: 54px 65px 57px;
+    padding: 54px 65px 59px;
   }
 
   .contacts {
@@ -3031,12 +3134,39 @@ button,
   }
 
   .contacts__left-column {
-    padding: 70px 163px 70px 133px;
+    padding: 70px 163px 67px 133px;
     background-color: #102654;
   }
 
+  .contacts__form-title {
+    margin-bottom: 32px;
+  }
+
+  .contacts__form {
+    -webkit-column-gap: 60px;
+    -moz-column-gap: 60px;
+    column-gap: 60px;
+  }
+
   .contacts__right-column {
-    padding: 70px 163px 70px 133px;
+    padding: 70px 163px 62px 133px;
+  }
+
+  .contacts__title {
+    margin-bottom: 32px;
+  }
+
+  .contacts__list-address {
+    padding-right: 49px;
+    padding-left: 0;
+  }
+
+  .contacts__list-phone {
+    padding-left: 47px;
+  }
+
+  .contacts__item {
+    margin-bottom: 19px;
   }
 
   .contacts__item h3 {
@@ -3047,16 +3177,20 @@ button,
   .contacts__item p {
     font-size: 18px;
     line-height: 27px;
+    margin-top: 6px;
   }
 
   .contacts__item a {
+    display: inline-block;
     font-size: 18px;
     line-height: 27px;
+    margin-top: 6px;
   }
 
   .footer__wrapper {
     padding-top: 45px;
-    padding-bottom: 44px;
+    padding-bottom: 25px;
+    padding: 45px 40px 25px 45px;
   }
 }
 
@@ -3116,23 +3250,23 @@ button,
   }
 
   .header__text {
-    top: 220px;
-    right: 180px;
+    top: 193px;
   }
 
   .header__left-column {
-    padding-top: 80px;
+    padding-top: 69px;
   }
 
   .header__city-name {
     font-size: 28px;
     line-height: 34px;
-    margin-bottom: 20px;
+    margin-bottom: 9px;
   }
 
   .header__title {
     font-size: 78px;
     line-height: 78px;
+    margin-bottom: 41px;
   }
 
   .header__button {
@@ -3173,7 +3307,7 @@ button,
 
   .about-gym__title {
     text-align: left;
-    margin-bottom: 12px;
+    margin-bottom: 5px;
   }
 
   .about-gym__subtitle {
@@ -3183,10 +3317,10 @@ button,
 
   .about-gym__left-column p {
     text-align: left;
-    margin-bottom: 33px;
+    margin-bottom: 32px;
   }
 
-  .about-gym__img {
+  .about-gym img {
     width: 100%;
     height: 313px;
     margin-bottom: 40px;
@@ -3209,6 +3343,10 @@ button,
     display: none;
   }
 
+  .subscription__title {
+    margin-bottom: 9px;
+  }
+
   .subscription__tabs-triggers {
     margin-bottom: 35px;
   }
@@ -3217,6 +3355,10 @@ button,
     font-size: 16px;
     line-height: 24px;
     margin-right: 45px;
+  }
+
+  .subscription__list {
+    gap: 35px;
   }
 
   .subscription__item {
@@ -3230,12 +3372,20 @@ button,
   }
 
   .subscription__item p {
-    margin-bottom: 75px;
+    margin-bottom: 54px;
   }
 
   .subscription__item b {
     font-size: 48px;
     line-height: 72px;
+    margin-bottom: 31px;
+  }
+
+  .subscription__item b::before {
+    top: -44px;
+    left: -15px;
+    font-size: 80px;
+    line-height: 120px;
   }
 
   .subscription__item b::after {
@@ -3253,10 +3403,20 @@ button,
   }
 
   .events__item-desc {
-    max-width: 100%;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    max-width: 100%;
+    padding: 46px 43px 50px;
+  }
+
+  .events__item-desc p {
+    line-height: 18px;
+    margin-bottom: 30px;
+  }
+
+  .events__item-desc button {
+    padding-bottom: 12px;
   }
 
   .events__item-img {
@@ -3270,12 +3430,20 @@ button,
     padding: 0 47px 70px;
   }
 
+  .trainers__title {
+    margin-bottom: 42px;
+  }
+
   .trainers__item {
     height: 274px;
   }
 
   .trainers__item-desc {
-    padding: 41px 34px;
+    padding: 46px 33px;
+  }
+
+  .advantages__wrapper {
+    padding: 70px 0 64px;
   }
 
   .advantages__title {
@@ -3285,6 +3453,7 @@ button,
   .advantages__list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    row-gap: 35px;
   }
 
   .advantages__list-item:nth-child(-n + 2) {
@@ -3301,11 +3470,13 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    padding: 0 44px 0;
   }
 
   .advantages__list-item b {
     text-align: center;
     margin-right: 0;
+    margin-bottom: 7px;
   }
 
   .advantages__list-item span {
@@ -3327,7 +3498,17 @@ button,
     -ms-grid-row: 3;
     -ms-grid-row-span: 1;
     grid-row: 3 / 4;
-    margin: 0;
+    margin: 10px 0 5px;
+    padding: 35px 55px;
+  }
+
+  .advantages__list-item-main h3 {
+    line-height: 26px;
+    margin-bottom: 12px;
+  }
+
+  .promotions__title {
+    margin-bottom: 42px;
   }
 
   .promotions__list {
@@ -3349,7 +3530,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 41px;
+    padding: 41px 25px 45px;
   }
 
   .promotions__item-main-desc b {
@@ -3368,6 +3549,24 @@ button,
 
   .promotions__item-main img {
     height: 299px;
+  }
+
+  .promotions__item {
+    padding: 36px 25px 40px;
+  }
+
+  .promotions__item h3 {
+    text-align: center;
+  }
+
+  .promotions__item p {
+    text-align: center;
+  }
+
+  .promotions__item a {
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
 
   .reviews {

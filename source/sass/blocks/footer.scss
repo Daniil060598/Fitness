@@ -6,11 +6,12 @@
   display: flex;
   justify-content: space-between;
   padding-top: 41px;
-  padding-bottom: 42px;
+  padding-bottom: 23px;
 
   @include vp-1199 {
     padding-top: 45px;
-    padding-bottom: 44px;
+    padding-bottom: 25px;
+    padding: 45px 40px 25px 45px;
   }
 
   @include vp-767 {
@@ -23,6 +24,7 @@
 .footer__logo {
   flex-shrink: 0;
   margin-right: 40px;
+  margin-top: 4px;
 
   @include vp-767 {
     margin-bottom: 24px;
