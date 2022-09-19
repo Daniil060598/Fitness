@@ -6,7 +6,7 @@
   padding: 120px 76px 107px;
 
   @include vp-1199 {
-    padding: 100px 45px 94px;
+    padding: 100px 45px 72px;
   }
 
   @include vp-767 {
@@ -37,9 +37,8 @@
         min-content,
         max-content
       );
-    column-gap: 10px;
     justify-content: space-between;
-    column-gap: 45px;
+    column-gap: 56px;
     row-gap: 43px;
   }
 

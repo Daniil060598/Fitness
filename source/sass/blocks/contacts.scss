@@ -22,7 +22,7 @@
 }
 
 .contacts__left-column {
-  padding: 70px 170px 65px 20px;
+  padding: 70px 170px 63px 20px;
 
   @include vp-1199 {
     padding: 70px 163px 67px 133px;
@@ -30,7 +30,7 @@
   }
 
   @include vp-767 {
-    padding: 70px 15px;
+    padding: 70px 15px 68px;
   }
 }
 
@@ -41,19 +41,25 @@
   @include vp-1199 {
     margin-bottom: 32px;
   }
+
+  @include vp-767 {
+    margin-bottom: 34px;
+  }
 }
 
 .contacts__form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 26px;
 
   @include vp-1199 {
     column-gap: 60px;
+    row-gap: 28px;
   }
 
   @include vp-767 {
     grid-template-columns: 1fr;
+    row-gap: 31px;
   }
 }
 
@@ -83,18 +89,19 @@
 
   @include vp-767 {
     grid-column: 1 / 2;
+    margin-top: 6px;
   }
 }
 
 .contacts__right-column {
-  padding: 70px 56px 65px 120px;
+  padding: 70px 56px 63px 120px;
 
   @include vp-1199 {
     padding: 70px 163px 62px 133px;
   }
 
   @include vp-767 {
-    padding: 70px 15px;
+    padding: 70px 15px 61px;
   }
 }
 
@@ -103,6 +110,10 @@
 
   @include vp-1199 {
     margin-bottom: 32px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 34px;
   }
 }
 

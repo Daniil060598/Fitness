@@ -72,7 +72,6 @@ window.addEventListener('DOMContentLoaded', () => {
   const swiper2 = new Swiper('.reviews__slider', {
     // Optional parameters
     spaceBetween: 200,
-    loop: true,
 
     // Navigation arrows
     navigation: {

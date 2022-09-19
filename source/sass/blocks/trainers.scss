@@ -52,6 +52,19 @@
     transition: $trans-default;
     background-color: #10265490;
     height: 100%;
+    overflow-y: scroll;
+    padding-right: 38px;
+
+    &::-webkit-scrollbar {
+      background-color: transparent;
+      width: 8px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #f9fbfd;
+      border: 2px solid $color-russian-black;
+      border-radius: 25px;
+    }
   }
 
   &:hover h3 {
@@ -60,20 +73,40 @@
 
   @include vp-1199 {
     width: 268px;
+
+    &:hover h3 {
+      padding-right: 19px;
+    }
+
+    &:hover p {
+      padding-right: 19px;
+    }
   }
 
   @include vp-767 {
     height: 274px;
+
+    &:hover .trainers__item-desc {
+      padding-right: 25px;
+    }
+
+    &:hover h3 {
+      padding-right: 0;
+    }
+
+    &:hover p {
+      padding-right: 0;
+    }
   }
 }
 
 .trainers__item-desc {
   position: absolute;
   top: 193px;
-  padding: 56px 45px 52px 55px;
+  padding: 56px 45px 30px 55px;
 
   @include vp-767 {
-    padding: 46px 33px;
+    padding: 46px 33px 30px;
   }
 }
 
@@ -121,6 +154,10 @@
     height: 6px;
     border-radius: 25px;
     background-color: $color-default-white;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
   }
 }
 

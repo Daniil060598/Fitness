@@ -40,8 +40,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    // grid-template-rows: minmax(299px, 400px) minmax(299px, 500px);
+    grid-template-rows: 1fr 299px;
     grid-column: 1 / 2;
   }
 }
@@ -55,6 +54,7 @@
 
   @include vp-767 {
     align-items: center;
+    min-height: 299px;
     padding: 41px 25px 45px;
   }
 }
@@ -101,32 +101,34 @@
   }
 }
 
-.promotions__item-main img {
-  object-fit: cover;
-  height: 100%;
-
-  @include vp-1199 {
-    width: 100%;
-  }
+.promotions__img-wrapper {
+  position: relative;
+  overflow: hidden;
 
   @include vp-767 {
-    // object-fit: contain;
-    // background-color: $color-ghost-white;
     height: 299px;
+  }
+}
+
+.promotions__item-main img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+
+  @include vp-767 {
+    height: auto;
   }
 }
 
 .promotions__item {
   display: flex;
   flex-direction: column;
+  min-height: 211px;
   padding: 24px 28px 30px;
   border: 7px solid transparent;
   border-image: linear-gradient(#ed0233 17.6%, #003eb7 95.31%);
   border-image-slice: 1;
-
-  @include vp-1199 {
-    min-height: 211px;
-  }
 
   @include vp-767 {
     padding: 36px 25px 40px;
@@ -163,6 +165,12 @@
   text-transform: uppercase;
   color: $color-tory-blue;
   border-bottom: solid 1px $color-tory-blue;
+  transition: $trans-default;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
 
   @include vp-767 {
     align-self: center;

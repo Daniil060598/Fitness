@@ -9,14 +9,12 @@
   padding-bottom: 23px;
 
   @include vp-1199 {
-    padding-top: 45px;
-    padding-bottom: 25px;
     padding: 45px 40px 25px 45px;
   }
 
   @include vp-767 {
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 47px;
     padding-bottom: 52px;
   }
 }

@@ -9,9 +9,10 @@
 
   @include vp-767 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 130px);
+    grid-template-columns: 1fr 1fr;
     column-gap: 30px;
     row-gap: 21px;
+    padding-right: 0;
   }
 }
 
@@ -37,4 +38,10 @@
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
+  transition: $trans-default;
+
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
 }

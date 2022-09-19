@@ -41,7 +41,7 @@
       "logo phone"
       "title title";
     row-gap: 0;
-    padding: 20px 15px 80px;
+    padding: 20px 15px 78px;
   }
 }
 
@@ -150,7 +150,7 @@
   @include vp-767 {
     font-size: 78px;
     line-height: 78px;
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 }
 
@@ -166,6 +166,7 @@
 
   @include vp-767 {
     width: 100%;
+    padding: 21px 20px 20px;
   }
 }
 

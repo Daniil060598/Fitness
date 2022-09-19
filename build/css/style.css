@@ -1303,6 +1303,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -1415,6 +1416,7 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 320px;
 }
 
 .wrapper .header,
@@ -1570,6 +1572,14 @@ button,
   font-size: 14px;
   line-height: 16px;
   color: #ffffff;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.footer-nav__item a:hover,
+.footer-nav__item a:focus {
+  opacity: 0.5;
 }
 
 .social__list {
@@ -1795,7 +1805,7 @@ button,
   position: absolute;
   width: 100%;
   height: 100%;
-  background: url("../img/video-cover.jpg") no-repeat;
+  background: url("../img/video-cover.jpg") center no-repeat;
   z-index: 1;
 }
 
@@ -2160,7 +2170,7 @@ button,
   margin: 0 0 45px;
 }
 
-.events__item-desc button {
+.events__item-desc a {
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-column: 1 / 3;
@@ -2211,6 +2221,19 @@ button,
   transition: 0.3s ease;
   background-color: #10265490;
   height: 100%;
+  overflow-y: scroll;
+  padding-right: 38px;
+}
+
+.trainers__item:hover .trainers__item-desc::-webkit-scrollbar {
+  background-color: transparent;
+  width: 8px;
+}
+
+.trainers__item:hover .trainers__item-desc::-webkit-scrollbar-thumb {
+  background-color: #f9fbfd;
+  border: 2px solid #030a1a;
+  border-radius: 25px;
 }
 
 .trainers__item:hover h3 {
@@ -2220,7 +2243,7 @@ button,
 .trainers__item-desc {
   position: absolute;
   top: 193px;
-  padding: 56px 45px 52px 55px;
+  padding: 56px 45px 30px 55px;
 }
 
 .trainers__item-desc h3 {
@@ -2260,6 +2283,10 @@ button,
   height: 6px;
   border-radius: 25px;
   background-color: #ffffff;
+}
+
+.trainers__item-desc li:last-child {
+  margin-bottom: 0;
 }
 
 .trainers__item img {
@@ -2462,9 +2489,16 @@ button,
   border-bottom: solid 1px #ffffff;
 }
 
+.promotions__img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .promotions__item-main img {
+  position: absolute;
   -o-object-fit: cover;
   object-fit: cover;
+  width: 100%;
   height: 100%;
 }
 
@@ -2476,6 +2510,7 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  min-height: 211px;
   padding: 24px 28px 30px;
   border: 7px solid transparent;
   -o-border-image: -o-linear-gradient(#ed0233 17.6%, #003eb7 95.31%);
@@ -2507,6 +2542,14 @@ button,
   text-transform: uppercase;
   color: #102654;
   border-bottom: solid 1px #102654;
+  -webkit-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.promotions__item a:hover,
+.promotions__item a:focus {
+  opacity: 0.8;
 }
 
 .reviews {
@@ -2534,7 +2577,7 @@ button,
   -moz-column-gap: 28px;
   column-gap: 28px;
   max-width: 560px;
-  padding: 54px 62px 57px;
+  padding: 54px 62px 55px;
   color: #ffffff;
   background-color: #1c3374;
 }
@@ -2563,7 +2606,7 @@ button,
   -ms-grid-column-span: 1;
   grid-column: 2 / 3;
   font-size: 16px;
-  line-height: 22px;
+  line-height: 23px;
   margin: 0;
 }
 
@@ -2591,7 +2634,7 @@ button,
 }
 
 .contacts__left-column {
-  padding: 70px 170px 65px 20px;
+  padding: 70px 170px 63px 20px;
 }
 
 .contacts__form-title {
@@ -2604,7 +2647,7 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 28px;
+  gap: 26px;
 }
 
 .contacts__form-field input {
@@ -2637,7 +2680,7 @@ button,
 }
 
 .contacts__right-column {
-  padding: 70px 56px 65px 120px;
+  padding: 70px 56px 63px 120px;
 }
 
 .contacts__title {
@@ -2968,7 +3011,7 @@ button,
     margin-bottom: 31px;
   }
 
-  .events__item-desc button {
+  .events__item-desc a {
     font-size: 10px;
     line-height: 12px;
     padding: 13px 20px 14px;
@@ -2994,6 +3037,14 @@ button,
     width: 268px;
   }
 
+  .trainers__item:hover h3 {
+    padding-right: 19px;
+  }
+
+  .trainers__item:hover p {
+    padding-right: 19px;
+  }
+
   .trainers__item-desc h3 {
     padding-right: 0;
   }
@@ -3003,7 +3054,7 @@ button,
   }
 
   .advantages__wrapper {
-    padding: 100px 45px 94px;
+    padding: 100px 45px 72px;
   }
 
   .advantages__title {
@@ -3021,9 +3072,9 @@ button,
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-column-gap: 45px;
-    -moz-column-gap: 45px;
-    column-gap: 45px;
+    -webkit-column-gap: 56px;
+    -moz-column-gap: 56px;
+    column-gap: 56px;
     row-gap: 43px;
   }
 
@@ -3102,14 +3153,6 @@ button,
     min-height: 462px;
   }
 
-  .promotions__item-main img {
-    width: 100%;
-  }
-
-  .promotions__item {
-    min-height: 211px;
-  }
-
   .reviews {
     max-width: 698px;
     padding: 0 0 100px;
@@ -3121,7 +3164,7 @@ button,
 
   .reviews__item {
     max-width: 566px;
-    padding: 54px 65px 59px;
+    padding: 54px 65px 55px;
   }
 
   .contacts {
@@ -3146,6 +3189,7 @@ button,
     -webkit-column-gap: 60px;
     -moz-column-gap: 60px;
     column-gap: 60px;
+    row-gap: 28px;
   }
 
   .contacts__right-column {
@@ -3226,11 +3270,13 @@ button,
   .footer-nav__list {
     display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 130px);
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     -webkit-column-gap: 30px;
     -moz-column-gap: 30px;
     column-gap: 30px;
     row-gap: 21px;
+    padding-right: 0;
   }
 
   .footer-nav__item {
@@ -3241,7 +3287,7 @@ button,
   .header__wrapper {
     grid-template-areas: "logo phone" "title title";
     row-gap: 0;
-    padding: 20px 15px 80px;
+    padding: 20px 15px 78px;
   }
 
   .header__phone {
@@ -3266,11 +3312,12 @@ button,
   .header__title {
     font-size: 78px;
     line-height: 78px;
-    margin-bottom: 41px;
+    margin-bottom: 42px;
   }
 
   .header__button {
     width: 100%;
+    padding: 21px 20px 20px;
   }
 
   .header__img {
@@ -3318,6 +3365,7 @@ button,
   .about-gym__left-column p {
     text-align: left;
     margin-bottom: 32px;
+    padding-right: 15px;
   }
 
   .about-gym img {
@@ -3415,7 +3463,7 @@ button,
     margin-bottom: 30px;
   }
 
-  .events__item-desc button {
+  .events__item-desc a {
     padding-bottom: 12px;
   }
 
@@ -3438,8 +3486,20 @@ button,
     height: 274px;
   }
 
+  .trainers__item:hover .trainers__item-desc {
+    padding-right: 25px;
+  }
+
+  .trainers__item:hover h3 {
+    padding-right: 0;
+  }
+
+  .trainers__item:hover p {
+    padding-right: 0;
+  }
+
   .trainers__item-desc {
-    padding: 46px 33px;
+    padding: 46px 33px 30px;
   }
 
   .advantages__wrapper {
@@ -3519,8 +3579,8 @@ button,
   .promotions__item-main {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    -ms-grid-rows: 1fr 299px;
+    grid-template-rows: 1fr 299px;
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
@@ -3530,6 +3590,7 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    min-height: 299px;
     padding: 41px 25px 45px;
   }
 
@@ -3547,8 +3608,12 @@ button,
     align-self: center;
   }
 
-  .promotions__item-main img {
+  .promotions__img-wrapper {
     height: 299px;
+  }
+
+  .promotions__item-main img {
+    height: auto;
   }
 
   .promotions__item {
@@ -3574,6 +3639,10 @@ button,
     padding: 0 0 70px;
   }
 
+  .reviews__title {
+    margin-bottom: 42px;
+  }
+
   .reviews__slider {
     padding: 0 47px;
   }
@@ -3584,12 +3653,12 @@ button,
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    row-gap: 20px;
+    row-gap: 15px;
     -webkit-column-gap: 15px;
     -moz-column-gap: 15px;
     column-gap: 15px;
     max-width: 100%;
-    padding: 40px 25px;
+    padding: 40px 25px 36px;
   }
 
   .reviews__item picture {
@@ -3599,14 +3668,18 @@ button,
   }
 
   .reviews__item img {
-    padding-left: 15px;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+    width: 68px;
+    height: 68px;
+    padding-top: 0;
+    margin-left: 16px;
   }
 
   .reviews__item h3 {
     margin: 0;
+    line-height: 26px;
   }
 
   .reviews__item p {
@@ -3614,6 +3687,7 @@ button,
     -ms-grid-column-span: 2;
     grid-column: 1 / 3;
     text-align: center;
+    line-height: 22px;
   }
 
   .reviews__slider .slider-nav_prev {
@@ -3625,22 +3699,32 @@ button,
   }
 
   .contacts__left-column {
-    padding: 70px 15px;
+    padding: 70px 15px 68px;
+  }
+
+  .contacts__form-title {
+    margin-bottom: 34px;
   }
 
   .contacts__form {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
+    row-gap: 31px;
   }
 
   .contacts__form-button {
     -ms-grid-column: 1;
     -ms-grid-column-span: 1;
     grid-column: 1 / 2;
+    margin-top: 6px;
   }
 
   .contacts__right-column {
-    padding: 70px 15px;
+    padding: 70px 15px 61px;
+  }
+
+  .contacts__title {
+    margin-bottom: 34px;
   }
 
   .contacts__list-wrapper {
@@ -3665,7 +3749,7 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-top: 50px;
+    padding-top: 47px;
     padding-bottom: 52px;
   }
 
@@ -3675,5 +3759,11 @@ button,
 
   .footer__social {
     margin-top: 35px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .about-gym__video-cover {
+    background-image: url("../img/video-cover@2x.jpg");
   }
 }
