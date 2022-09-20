@@ -6,8 +6,10 @@
   width: 16px;
   height: 32px;
   background: transparent url("../img/svg/slider-arrow.svg") center no-repeat;
+  opacity: 0.3;
   border: none;
   cursor: pointer;
+  transition: $trans-default;
 
   &_prev {
     left: -56px;
@@ -16,6 +18,15 @@
   &_next {
     right: -56px;
     transform: translate(0, -50%) rotate(180deg);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:disabled {
+    opacity: 0.1;
   }
 
   @include vp-767 {

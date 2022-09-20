@@ -67,35 +67,6 @@
   display: none;
 }
 
-.tabs__triggers-item {
-  position: relative;
-  font-size: 20px;
-  line-height: 30px;
-  padding: 12px 0;
-  margin-right: 46px;
-  color: #10265450;
-  background-color: transparent;
-  transition: $trans-default;
-  cursor: pointer;
-  z-index: 1;
-
-  &:last-of-type {
-    margin-right: 0;
-  }
-
-  @include vp-1199 {
-    font-size: 18px;
-    line-height: 27px;
-    margin-right: 54px;
-  }
-
-  @include vp-767 {
-    font-size: 16px;
-    line-height: 24px;
-    margin-right: 45px;
-  }
-}
-
 .subscription__list {
   display: grid;
   grid-template-columns: repeat(3, minmax(auto, 360px));
@@ -176,7 +147,7 @@
   }
 }
 
-.subscription__item b {
+.subscription__item strong {
   position: relative;
   display: flex;
   align-items: baseline;

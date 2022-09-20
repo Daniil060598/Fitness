@@ -30,6 +30,10 @@
   position: relative;
 }
 
+.trainers__slider_no-js .slider-nav {
+  display: none;
+}
+
 .trainers__slider {
   overflow: hidden;
 }
@@ -45,6 +49,10 @@
 
   &:last-child {
     margin-right: 0;
+  }
+
+  &:nth-child(4n) {
+    margin-right: 100px;
   }
 
   &:hover .trainers__item-desc {

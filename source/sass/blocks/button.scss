@@ -12,8 +12,9 @@
   color: $color-default-white;
   background-color: transparent;
   border: 4px solid $color-default-white;
-  cursor: pointer;
   transition: $trans-default;
+  user-select: none;
+  cursor: pointer;
 
   &:disabled {
     opacity: 0.5;
@@ -22,6 +23,7 @@
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    background-color: $color-default-white;
+    color: $color-tory-blue;
   }
 }

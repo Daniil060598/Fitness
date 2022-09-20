@@ -6,11 +6,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
+  const videoWrapperElement = document.querySelector('.about-gym__video');
   const buttonVideoPlayElement = document.querySelector('.about-gym__video-play');
-  const videoCoverElement = document.querySelector('.about-gym__video-cover');
+
+  videoWrapperElement.classList.remove('about-gym__video_no-js');
 
   buttonVideoPlayElement.addEventListener('click', () => {
-    videoCoverElement.style.display = 'none';
+    videoWrapperElement.classList.add('about-gym__video_active');
     player.playVideo();
   });
 
@@ -43,6 +45,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Swiper 7.4.1
 
+  // Trainers slider
+
+  document.querySelector('.trainers__slider_no-js').classList.remove('trainers__slider_no-js');
+
   const swiper = new Swiper('.trainers__slider', {
   // Optional parameters
     slidesPerView: 1,
@@ -69,6 +75,10 @@ window.addEventListener('DOMContentLoaded', () => {
     },
   });
 
+  // Reviews сarousel
+
+  document.querySelector('.reviews__slider_no-js').classList.remove('reviews__slider_no-js');
+
   const swiper2 = new Swiper('.reviews__slider', {
     // Optional parameters
     spaceBetween: 200,
@@ -78,6 +88,17 @@ window.addEventListener('DOMContentLoaded', () => {
       nextEl: '.reviews__slider .slider-nav_next',
       prevEl: '.reviews__slider .slider-nav_prev',
     },
+  });
+
+  // Local Storage
+
+  document.querySelectorAll('.form').forEach((item) => {
+    item.addEventListener('submit', () => {
+      const inputName = item.querySelector('[data-input-name]');
+      const inputTel = item.querySelector('[data-input-tel]');
+      localStorage.setItem('name', inputName.value);
+      localStorage.setItem('tel', inputTel.value);
+    });
   });
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'

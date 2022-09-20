@@ -65,7 +65,7 @@
   margin: 0 0 3px;
 }
 
-.promotions__item-main-desc b {
+.promotions__item-main-desc strong {
   font-size: 70px;
   line-height: 70px;
   margin: 0 0 18px;
@@ -86,19 +86,10 @@
 }
 
 .promotions__item-main-desc a {
-  align-self: flex-start;
-  margin-top: auto;
-  font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
   border-bottom: solid 1px $color-default-white;
-
-  @include vp-767 {
-    align-self: center;
-  }
 }
 
 .promotions__img-wrapper {
@@ -156,20 +147,24 @@
 }
 
 .promotions__item a {
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-tory-blue;
+  border-bottom: solid 1px $color-tory-blue;
+}
+
+.promotions__item-main-desc a,
+.promotions__item a {
   align-self: flex-start;
   margin-top: auto;
   font-weight: 700;
-  font-size: 12px;
-  line-height: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: $color-tory-blue;
-  border-bottom: solid 1px $color-tory-blue;
   transition: $trans-default;
 
   &:hover,
   &:focus {
-    opacity: 0.8;
+    border-bottom-color: transparent;
   }
 
   @include vp-767 {

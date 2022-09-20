@@ -36,11 +36,16 @@
   }
 }
 
+.reviews__slider_no-js .slider-nav {
+  display: none;
+}
+
 .reviews__item {
   display: grid;
   grid-template-columns: 80px minmax(auto, 328px);
   column-gap: 28px;
   max-width: 560px;
+  margin-right: 100px;
   padding: 54px 62px 55px;
   color: $color-default-white;
   background-color: $color-resolution-blue;

@@ -104,14 +104,61 @@
 
 .about-gym__video {
   position: absolute;
-  top: 408px;
+  bottom: 120px;
   left: 53%;
   transform: translate(-49%, 0);
   height: 228px;
   width: 364px;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../img/video-cover.jpg") center no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(20, 54, 122, 0.5);
+    z-index: 1;
+  }
+
+  &_active {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &_no-js {
+    &::before {
+      display: none;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/video-cover@2x.jpg");
+  }
+
   @include vp-1199 {
-    top: 587px;
+    bottom: 100px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 266px;
@@ -119,43 +166,26 @@
   }
 
   @include vp-767 {
-    align-self: center;
     position: relative;
-    top: 0;
     left: 0;
+    bottom: 0;
+    align-self: center;
     transform: none;
     width: 320px;
   }
 }
 
+.about-gym__video_active .about-gym__video-play {
+  display: none;
+}
+
+.about-gym__video_no-js .about-gym__video-play {
+  display: none;
+}
+
 .about-gym__video iframe {
   width: 100%;
   height: 100%;
-}
-
-.about-gym__video-cover {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url("../img/video-cover.jpg") center no-repeat;
-  z-index: 1;
-
-
-  &::after {
-    content: "";
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: rgba(20, 54, 122, 0.5);
-    z-index: -1;
-  }
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/video-cover@2x.jpg");
-  }
 }
 
 .about-gym__video-play {
@@ -165,7 +195,7 @@
   transform: translate(-50%, -50%);
   width: 100px;
   height: 100px;
-  background: transparent url("../../img/svg/video-play-button.svg") center
+  background: transparent url("../img/svg/video-play-button.svg") center
     no-repeat;
   border: none;
   cursor: pointer;
