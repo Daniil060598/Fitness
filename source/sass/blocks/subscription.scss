@@ -4,15 +4,18 @@
 
   &::after {
     content: url("../img/subscription-decor.png");
+    width: 287px;
+    height: 494px;
     position: absolute;
-    bottom: -157px;
+    bottom: -150px;
     right: 0;
   }
 
   @include vp-1199 {
     &::after {
       content: url("../img/subscription-decor-tablet.png");
-      bottom: -132px;
+      bottom: -175px;
+      right: 60px;
     }
   }
 

@@ -24,6 +24,10 @@
   max-width: 826px;
   padding-right: 30px;
 
+  @include vp-1199 {
+    max-width: 565px;
+  }
+
   @include vp-767 {
     padding-right: 0;
   }
@@ -31,15 +35,13 @@
 
 .footer__social {
   flex-grow: 1;
-
+  max-width: 334px;
   @include vp-767 {
     margin-top: 35px;
   }
 }
 
 .footer__social-list {
-  justify-content: flex-end;
-
   @include vp-767 {
     justify-content: flex-start;
   }

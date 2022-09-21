@@ -118,11 +118,22 @@
 }
 
 .contacts__list {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 120px;
   row-gap: 17px;
   padding-left: 4px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    width: 1px;
+    height: 100%;
+    background-color: #74819C;
+  }
 
   @include vp-1199 {
     column-gap: 96px;
@@ -132,6 +143,10 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
+
+    &::after {
+      display: none;
+    }
   }
 }
 

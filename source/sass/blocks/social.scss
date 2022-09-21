@@ -1,15 +1,8 @@
 .social__list {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.social__item {
-  margin-right: 11px;
-  margin-bottom: 11px;
-
-  &:last-child {
-    margin-right: 0;
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25px);
+  gap: 11px;
+  justify-content: end;
 }
 
 .social__link {
