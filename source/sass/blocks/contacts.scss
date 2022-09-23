@@ -126,13 +126,13 @@
   padding-left: 4px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 50%;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
     width: 1px;
     height: 100%;
-    background-color: #74819C;
+    background-color: #74819c;
   }
 
   @include vp-1199 {

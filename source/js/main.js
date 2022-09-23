@@ -54,6 +54,10 @@ window.addEventListener('DOMContentLoaded', () => {
     slidesPerView: 1,
     loop: true,
     spaceBetween: 30,
+    keyboard: {
+      enabled: true,
+      onlyInViewport: true,
+    },
 
     breakpoints: {
       // when window width is >= 768px

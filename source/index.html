@@ -72,10 +72,19 @@
           </p>
         </div>
         <picture>
-          <source type="image/webp" srcset="img/about-gym-img.webp 1x, img/about-gym-img@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 767px)"
+            srcset="img/about-gym/about-gym-img-mobile.webp 1x, img/about-gym/about-gym-img-mobile@2x.webp 2x">
+          <source type="image/webp" media="(max-width: 1199px)"
+            srcset="img/about-gym/about-gym-img-tablet.webp 1x, img/about-gym/about-gym-img-tablet@2x.webp 2x">
+          <source media="(max-width: 767px)"
+            srcset="img/about-gym/about-gym-img-mobile.jpg 1x, img/about-gym/about-gym-img-mobile@2x.jpg 2x">
+          <source media="(max-width: 1199px)"
+            srcset="img/about-gym/about-gym-img-tablet.jpg 1x, img/about-gym/about-gym-img-tablet@2x.jpg 2x">
+          <source type="image/webp"
+            srcset="img/about-gym/about-gym-img.webp 1x, img/about-gym/about-gym-img@2x.webp 2x">
           <!-- 1х: 660px; 2x: 1320px -->
-          <img src="img/about-gym-img.jpg" width="660" height="401" srcset="img/about-gym-img@2x.jpg 2x"
-            alt="Тренажерный зал.">
+          <img src="img/about-gym/about-gym-img.jpg" width="660" height="401"
+            srcset="img/about-gym/about-gym-img@2x.jpg 2x" alt="Тренажерный зал.">
         </picture>
         <div class="about-gym__video about-gym__video_no-js">
           <button class="about-gym__video-play"><span class="visually-hidden">Воспроизвести видео</span></button>
@@ -181,7 +190,10 @@
             <a class="button" href="#">заполнить заявку</a>
           </div>
           <picture>
-            <source type="image/webp" srcset="img/events-img.webp 1x, img/events-img@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/events-img-mobile.webp 1x, img/events-img-mobile@2x.webp 2x">
+              <source type="image/webp" srcset="img/events-img.webp 1x, img/events-img@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/events-img-mobile.jpg 1x, img/events-img-mobile@2x.jpg 2x">
             <!-- 1х: 660px; 2x: 1320px -->
             <img class="events__item-img" src="img/events-img.jpg" width="660" height="500"
               srcset="img/events-img@2x.jpg 2x" alt="Мужчина спортивного телосложения отжимается от пола.">
@@ -191,9 +203,15 @@
       <section class="trainers container">
         <h2 class="trainers__title title">Тренеры</h2>
         <div class="trainers__slider-wrapper trainers__slider_no-js">
+          <button class="slider-nav slider-nav_prev">
+            <span class="visually-hidden">Предыдущий слайд</span>
+          </button>
+          <button class="slider-nav slider-nav_next">
+            <span class="visually-hidden">Следующий слайд</span>
+          </button>
           <div class="trainers__slider">
             <ul class="trainers__list list swiper-wrapper">
-              <li class="trainers__item swiper-slide">
+              <li class="trainers__item swiper-slide" tabindex="0">
                 <div class="trainers__item-desc">
                   <h3>Анна Павлова</h3>
                   <p>CrossFit</p>
@@ -210,7 +228,7 @@
                     alt="Анна Павлова">
                 </picture>
               </li>
-              <li class="trainers__item swiper-slide">
+              <li class="trainers__item swiper-slide" tabindex="0">
                 <div class="trainers__item-desc">
                   <h3>Алексей Лавров</h3>
                   <p>CrossFit</p>
@@ -227,7 +245,7 @@
                     alt="Алексей Лавров">
                 </picture>
               </li>
-              <li class="trainers__item swiper-slide">
+              <li class="trainers__item swiper-slide" tabindex="0">
                 <div class="trainers__item-desc">
                   <h3>Александр Пашков</h3>
                   <p>CrossFit</p>
@@ -244,7 +262,7 @@
                     alt="Александр Пашков">
                 </picture>
               </li>
-              <li class="trainers__item swiper-slide">
+              <li class="trainers__item swiper-slide" tabindex="0">
                 <div class="trainers__item-desc">
                   <h3>Мария Кетова</h3>
                   <p>CrossFit</p>
@@ -261,7 +279,7 @@
                     alt="Мария Кетова">
                 </picture>
               </li>
-              <li class="trainers__item swiper-slide">
+              <li class="trainers__item swiper-slide" tabindex="0">
                 <div class="trainers__item-desc">
                   <h3>Анна Павлова 2</h3>
                   <p>CrossFit</p>
@@ -278,7 +296,7 @@
                     alt="Анна Павлова">
                 </picture>
               </li>
-              <li class="trainers__item swiper-slide">
+              <li class="trainers__item swiper-slide" tabindex="0">
                 <div class="trainers__item-desc">
                   <h3>Алексей Лавров 2</h3>
                   <p>CrossFit</p>
@@ -295,7 +313,7 @@
                     alt="Алексей Лавров">
                 </picture>
               </li>
-              <li class="trainers__item swiper-slide">
+              <li class="trainers__item swiper-slide" tabindex="0">
                 <div class="trainers__item-desc">
                   <h3>Александр Пашков 2</h3>
                   <p>CrossFit</p>
@@ -312,7 +330,7 @@
                     alt="Александр Пашков">
                 </picture>
               </li>
-              <li class="trainers__item swiper-slide">
+              <li class="trainers__item swiper-slide" tabindex="0">
                 <div class="trainers__item-desc">
                   <h3>Мария Кетова 2</h3>
                   <p>CrossFit</p>
@@ -331,12 +349,6 @@
               </li>
             </ul>
           </div>
-          <button class="slider-nav slider-nav_prev">
-            <span class="visually-hidden">Предыдущий слайд</span>
-          </button>
-          <button class="slider-nav slider-nav_next">
-            <span class="visually-hidden">Следующий слайд</span>
-          </button>
         </div>
       </section>
       <section class="advantages">
@@ -460,7 +472,7 @@
               </div>
               <div class="contacts__form-field">
                 <label class="visually-hidden" for="tel">Введите ваш телефон</label>
-                <input type="tel" id="tel" name="tel" placeholder="Телефон" pattern="[0-9]{1,30}" data-input-tel
+                <input type="tel" id="tel" name="tel" placeholder="Телефон" pattern="\+?[0-9]{1,30}" data-input-tel
                   required>
               </div>
               <button class="contacts__form-button button" type="submit">отправить</button>
@@ -492,10 +504,13 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper container">
+        <a class="footer__logo-desktop">
+          <img class="logo" width="89" height="20" src="img/svg/supergym-logo.svg" alt="Логотип.">
+        </a>
         <nav class="footer__nav footer-nav">
           <h3 class="visually-hidden">Навигация по сайту</h3>
           <ul class="footer-nav__list list">
-            <li class="footer-nav__item_logo">
+            <li class="footer-nav__item footer-nav__item_logo">
               <a>
                 <img class="logo" width="89" height="20" src="img/svg/supergym-logo.svg" alt="Логотип.">
               </a>

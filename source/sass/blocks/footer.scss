@@ -2,6 +2,15 @@
   background-color: $color-russian-black;
 }
 
+.footer__logo-desktop {
+  padding-top: 4px;
+  padding-right: 40px;
+
+  @include vp-767 {
+    display: none;
+  }
+}
+
 .footer__wrapper {
   display: flex;
   justify-content: space-between;
@@ -15,12 +24,11 @@
   @include vp-767 {
     flex-direction: column;
     padding-top: 47px;
-    padding-bottom: 32px;
+    padding-bottom: 43px;
   }
 }
 
 .footer__nav {
-  flex-grow: 1;
   max-width: 826px;
   padding-right: 30px;
 
@@ -34,8 +42,6 @@
 }
 
 .footer__social {
-  flex-grow: 1;
-  max-width: 334px;
   @include vp-767 {
     margin-top: 35px;
   }

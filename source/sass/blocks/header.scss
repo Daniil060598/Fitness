@@ -27,7 +27,7 @@
   padding: 30px 20px 46px;
 
   @include vp-1199 {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 324px;
     grid-template-areas:
       "logo phone"
       "title img";
@@ -37,6 +37,7 @@
   }
 
   @include vp-767 {
+    grid-template-columns: auto auto;
     grid-template-areas:
       "logo phone"
       "title title";

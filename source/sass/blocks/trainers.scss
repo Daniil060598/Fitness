@@ -55,7 +55,8 @@
     margin-right: 100px;
   }
 
-  &:hover .trainers__item-desc {
+  &:hover .trainers__item-desc,
+  &:focus .trainers__item-desc {
     top: 0;
     transition: $trans-default;
     background-color: #10265490;
@@ -75,18 +76,21 @@
     }
   }
 
-  &:hover h3 {
+  &:hover h3,
+  &:focus h3 {
     margin-bottom: 0;
   }
 
   @include vp-1199 {
     width: 268px;
 
-    &:hover h3 {
+    &:hover h3,
+    &:focus h3 {
       padding-right: 19px;
     }
 
-    &:hover p {
+    &:hover p,
+    &:focus p {
       padding-right: 19px;
     }
   }
@@ -94,15 +98,18 @@
   @include vp-767 {
     height: 274px;
 
-    &:hover .trainers__item-desc {
+    &:hover .trainers__item-desc,
+    &:focus .trainers__item-desc {
       padding-right: 25px;
     }
 
-    &:hover h3 {
+    &:hover h3,
+    &:focus h3 {
       padding-right: 0;
     }
 
-    &:hover p {
+    &:hover p,
+    &:focus p {
       padding-right: 0;
     }
   }

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, 25px);
   gap: 11px;
-  justify-content: end;
+  max-width: 334px;
 }
 
 .social__link {

@@ -16,10 +16,12 @@
   margin-bottom: 20px;
 
   &_logo {
-    flex-shrink: 0;
-    padding-top: 4px;
-    margin-right: auto;
-    padding-right: 40px;
+    display: none;
+
+    @include vp-767 {
+      display: block;
+      padding-top: 4px;
+    }
   }
 
   &_services {
