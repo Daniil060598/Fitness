@@ -3639,8 +3639,9 @@ button,
   .trainers__item-desc {
     top: auto;
     bottom: -221px;
-    min-height: 312px;
+    height: 312px;
     padding: 46px 33px 30px;
+    overflow: hidden;
   }
 
   .advantages__wrapper {
