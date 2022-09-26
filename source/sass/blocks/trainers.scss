@@ -95,15 +95,12 @@
   }
 
   @include vp-767 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 274px;
+    min-height: 274px;
+    height: auto;
 
     &:hover .trainers__item-desc,
     &:focus .trainers__item-desc {
       padding-right: 25px;
-      max-width: 242px;
     }
 
     &:hover h3,
@@ -121,9 +118,13 @@
 .trainers__item-desc {
   position: absolute;
   top: 193px;
+  width: 100%;
   padding: 56px 45px 30px 55px;
 
   @include vp-767 {
+    top: auto;
+    bottom: -221px;
+    min-height: 312px;
     padding: 46px 33px 30px;
   }
 }
@@ -183,15 +184,4 @@
   object-fit: cover;
   height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-
-  @include vp-767 {
-    width: auto;
-    height: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
 }

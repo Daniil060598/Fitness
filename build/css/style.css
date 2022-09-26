@@ -2346,6 +2346,7 @@ button,
 .trainers__item-desc {
   position: absolute;
   top: 193px;
+  width: 100%;
   padding: 56px 45px 30px 55px;
 }
 
@@ -2397,10 +2398,6 @@ button,
   object-fit: cover;
   height: 100%;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
 }
 
 .advantages {
@@ -3620,23 +3617,13 @@ button,
   }
 
   .trainers__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    height: 274px;
+    min-height: 274px;
+    height: auto;
   }
 
   .trainers__item:hover .trainers__item-desc,
   .trainers__item:focus .trainers__item-desc {
     padding-right: 25px;
-    max-width: 242px;
   }
 
   .trainers__item:hover h3,
@@ -3650,16 +3637,10 @@ button,
   }
 
   .trainers__item-desc {
+    top: auto;
+    bottom: -221px;
+    min-height: 312px;
     padding: 46px 33px 30px;
-  }
-
-  .trainers__item img {
-    width: auto;
-    height: 100%;
-    left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -ms-transform: translate(-50%, 0);
-    transform: translate(-50%, 0);
   }
 
   .advantages__wrapper {
