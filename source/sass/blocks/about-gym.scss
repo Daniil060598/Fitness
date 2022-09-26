@@ -1,5 +1,4 @@
 .about-gym {
-  position: relative;
   display: flex;
   justify-content: space-between;
   padding-bottom: 235px;
@@ -102,11 +101,14 @@
   }
 }
 
+.about-gym__img-wrapper {
+  position: relative;
+}
+
 .about-gym__video {
   position: absolute;
-  bottom: 120px;
-  left: 53%;
-  transform: translate(-49%, 0);
+  top: 288px;
+  left: -63px;
   height: 228px;
   width: 364px;
 
@@ -119,6 +121,7 @@
     width: 100%;
     height: 100%;
     background: url("../img/video-cover.jpg") center no-repeat;
+    background-size: cover;
   }
 
   &::after {
@@ -158,7 +161,7 @@
   }
 
   @include vp-1199 {
-    bottom: 100px;
+    top: 260px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 266px;
@@ -168,10 +171,15 @@
   @include vp-767 {
     position: relative;
     left: 0;
-    bottom: 0;
+    top: 0;
+    width: 100%;
+    height: 250px;
     align-self: center;
     transform: none;
-    width: 320px;
+  }
+
+  @include vp-374 {
+    height: 167px;
   }
 }
 

@@ -40,6 +40,10 @@
   display: none;
 }
 
+.reviews__list {
+  align-items: center;
+}
+
 .reviews__item {
   display: grid;
   grid-template-columns: 80px minmax(auto, 328px);

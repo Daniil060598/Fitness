@@ -151,6 +151,9 @@
 }
 
 .contacts__item_phone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 

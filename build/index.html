@@ -22,7 +22,9 @@
         <a class="header__logo">
           <img class="header__logo-img logo" width="89" height="20" src="img/svg/supergym-logo.svg" alt="Логотип.">
         </a>
-        <a class="header__phone" href="tel:+88005555555">8-800-555-55-55</a>
+        <div class="header__phone-wrapper">
+          <a class="header__phone" href="tel:+88005555555">8-800-555-55-55</a>
+        </div>
         <div class="header__left-column">
           <p class="header__city-name">омск</p>
           <h1 class="header__title title title_big">
@@ -71,24 +73,26 @@
             несколько оборудованных залов для различных видов групповых занятий.
           </p>
         </div>
-        <picture>
-          <source type="image/webp" media="(max-width: 767px)"
-            srcset="img/about-gym/about-gym-img-mobile.webp 1x, img/about-gym/about-gym-img-mobile@2x.webp 2x">
-          <source type="image/webp" media="(max-width: 1199px)"
-            srcset="img/about-gym/about-gym-img-tablet.webp 1x, img/about-gym/about-gym-img-tablet@2x.webp 2x">
-          <source media="(max-width: 767px)"
-            srcset="img/about-gym/about-gym-img-mobile.jpg 1x, img/about-gym/about-gym-img-mobile@2x.jpg 2x">
-          <source media="(max-width: 1199px)"
-            srcset="img/about-gym/about-gym-img-tablet.jpg 1x, img/about-gym/about-gym-img-tablet@2x.jpg 2x">
-          <source type="image/webp"
-            srcset="img/about-gym/about-gym-img.webp 1x, img/about-gym/about-gym-img@2x.webp 2x">
-          <!-- 1х: 660px; 2x: 1320px -->
-          <img src="img/about-gym/about-gym-img.jpg" width="660" height="401"
-            srcset="img/about-gym/about-gym-img@2x.jpg 2x" alt="Тренажерный зал.">
-        </picture>
-        <div class="about-gym__video about-gym__video_no-js">
-          <button class="about-gym__video-play"><span class="visually-hidden">Воспроизвести видео</span></button>
-          <div id="player"></div>
+        <div class="about-gym__img-wrapper">
+          <picture>
+            <source type="image/webp" media="(max-width: 767px)"
+              srcset="img/about-gym/about-gym-img-mobile.webp 1x, img/about-gym/about-gym-img-mobile@2x.webp 2x">
+            <source type="image/webp" media="(max-width: 1199px)"
+              srcset="img/about-gym/about-gym-img-tablet.webp 1x, img/about-gym/about-gym-img-tablet@2x.webp 2x">
+            <source media="(max-width: 767px)"
+              srcset="img/about-gym/about-gym-img-mobile.jpg 1x, img/about-gym/about-gym-img-mobile@2x.jpg 2x">
+            <source media="(max-width: 1199px)"
+              srcset="img/about-gym/about-gym-img-tablet.jpg 1x, img/about-gym/about-gym-img-tablet@2x.jpg 2x">
+            <source type="image/webp"
+              srcset="img/about-gym/about-gym-img.webp 1x, img/about-gym/about-gym-img@2x.webp 2x">
+            <!-- 1х: 660px; 2x: 1320px -->
+            <img src="img/about-gym/about-gym-img.jpg" width="660" height="401"
+              srcset="img/about-gym/about-gym-img@2x.jpg 2x" alt="Тренажерный зал.">
+          </picture>
+          <div class="about-gym__video about-gym__video_no-js">
+            <button class="about-gym__video-play"><span class="visually-hidden">Воспроизвести видео</span></button>
+            <div id="player"></div>
+          </div>
         </div>
       </section>
       <section class="subscription" id="subscription">
@@ -356,12 +360,18 @@
           <h2 class="advantages__title title">Наши преимущества</h2>
           <ul class="advantages__list list">
             <li class="advantages__list-item advantages__list-item_position_top">
-              <strong>900<span>кв/м</span></strong>
+              <div>
+                <strong>900</strong>
+                <span>кв/м</span>
+              </div>
               <h3>Площадь</h3>
               <p>Занимайтесь без очередей и&nbsp;толпучки</p>
             </li>
             <li class="advantages__list-item advantages__list-item_position_top">
-              <strong>70<span>машин</span></strong>
+              <div>
+                <strong>70</strong>
+                <span>машин</span>
+              </div>
               <h3>Собственная парковка</h3>
               <p>Вы&nbsp;всегда найдете место для своей машины на&nbsp;нашей парковке</p>
             </li>
@@ -371,12 +381,18 @@
               <p>Современные тренажеры на&nbsp;все группы мышц</p>
             </li>
             <li class="advantages__list-item">
-              <strong>350<span>мест</span></strong>
+              <div>
+                <strong>350</strong>
+                <span>мест</span>
+              </div>
               <h3>Комфорт</h3>
               <p>Просторные раздевалки, душевые, фен, Wi-Fi, кулеры</p>
             </li>
             <li class="advantages__list-item">
-              <strong>5+<span>лет</span></strong>
+              <div>
+                <strong>5+</strong>
+                <span>лет</span>
+              </div>
               <h3>Тренерский опыт</h3>
               <p>Добивайтесь своих целей быстрее с&nbsp;профессиональным тренером</p>
             </li>
@@ -393,19 +409,20 @@
               <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
               <a href="#">подробнее</a>
             </div>
-            <div class="promotions__img-wrapper">
-              <picture>
-                <source type="image/webp" media="(max-width: 1199px)"
-                  srcset="img/promotions-img.webp 1x, img/promotions-img@2x.webp 2x">
-                <source type="image/webp"
-                  srcset="img/promotions-img-desktop.webp 1x, img/promotions-img-desktop@2x.webp 2x">
-                <source media="(max-width: 1199px)" srcset="img/promotions-img.jpg 1x, img/promotions-img2x.jpg 2x">
-                <!-- 1х: 280px; 2x: 560px -->
-                <img src="img/promotions-img-desktop.jpg" width="280" height="462"
-                  srcset="img/promotions-img-desktop@2x.jpg 2x"
-                  alt="Женщина спортивного телосложения на фоне ясного неба.">
-              </picture>
-            </div>
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)"
+                srcset="img/promotions-img-mobile.webp 1x, img/promotions-img-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1199px)"
+                srcset="img/promotions-img.webp 1x, img/promotions-img@2x.webp 2x">
+              <source type="image/webp"
+                srcset="img/promotions-img-desktop.webp 1x, img/promotions-img-desktop@2x.webp 2x">
+              <source media="(max-width: 767px)" srcset="img/promotions-img-mobile.jpg 1x, img/promotions-img-mobile@2x.jpg 2x">
+              <source media="(max-width: 1199px)" srcset="img/promotions-img.jpg 1x, img/promotions-img2x.jpg 2x">
+              <!-- 1х: 280px; 2x: 560px -->
+              <img src="img/promotions-img-desktop.jpg" width="280" height="462"
+                srcset="img/promotions-img-desktop@2x.jpg 2x"
+                alt="Женщина спортивного телосложения на фоне ясного неба.">
+            </picture>
           </li>
           <li class="promotions__item">
             <h3>Месяц бесплатно</h3>

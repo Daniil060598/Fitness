@@ -40,7 +40,7 @@
 
   @include vp-767 {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 299px;
+    grid-template-rows: 299px 1fr;
     grid-column: 1 / 2;
   }
 }
@@ -92,24 +92,10 @@
   border-bottom: solid 1px $color-default-white;
 }
 
-.promotions__img-wrapper {
-  position: relative;
-  overflow: hidden;
-
-  @include vp-767 {
-    height: 299px;
-  }
-}
-
 .promotions__item-main img {
-  position: absolute;
   object-fit: cover;
   width: 100%;
   height: 100%;
-
-  @include vp-767 {
-    height: auto;
-  }
 }
 
 .promotions__item {
@@ -117,7 +103,8 @@
   flex-direction: column;
   min-height: 211px;
   padding: 24px 28px 30px;
-  border: 7px solid transparent;
+  border-style: solid;
+  border-width: 7px;
   border-image: linear-gradient(#ed0233 17.6%, #003eb7 95.31%);
   border-image-slice: 1;
 

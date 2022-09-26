@@ -50,6 +50,13 @@
   grid-area: logo;
 }
 
+.header__phone-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  grid-area: phone;
+}
+
 .header__phone {
   justify-self: end;
   font-family: $ff-bebas-neue;
@@ -57,12 +64,15 @@
   line-height: 26px;
   letter-spacing: 0.03em;
   color: $color-default-white;
-  grid-area: phone;
   transition: $trans-default;
 
   &:hover,
   &:focus {
     opacity: 0.8;
+  }
+
+  & + & {
+    margin-top: 5px;
   }
 
   @include vp-1199 {
